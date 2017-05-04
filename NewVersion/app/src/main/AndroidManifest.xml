@@ -32,6 +32,7 @@
         <activity android:name=".activity.BindOrUnbindActivity"/>
         <activity android:name=".activity.HomeActivity"/>
         <activity android:name=".activity.CommonActivity"/>
+        <activity android:name=".activity.wait.ChatActivity"/>
 
     </application>
 

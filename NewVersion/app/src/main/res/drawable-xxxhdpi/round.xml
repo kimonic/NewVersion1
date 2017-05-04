@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="20dp"
+    android:height="20dp"
+    android:viewportWidth="100"
+    android:viewportHeight="100"
+    >
+    <group>
+        <!--A = elliptical Arc(A RX,RY,XROTATION,FLAG1,FLAG2,X,Y)：弧线-->
+
+
+        <!--android:pathData=" M50,50 a10,10 1,1 0 1,0" />-->
+        <!--rx ry 椭圆半径-->
+        <!--x-axis-rotation x轴旋转角度-->
+        <!--large-arc-flag 为0时表示取小弧度，1时取大弧度
+         （舍取的时候，是要长的还是短的）-->
+        <!--sweep-flag 0取逆时针方向，1取顺时针方向-->
+        <path
+
+            android:strokeColor="#a3a3a3"
+            android:strokeWidth="10"
+            android:pathData=" M50,5 a45,45 1,1 0 1,0"
+            />
+        <path
+
+            android:strokeColor="#a3a3a3"
+            android:strokeWidth="10"
+            android:pathData=" M20,50
+             L80,50
+"
+            />
+        <path
+
+            android:strokeColor="#a3a3a3"
+            android:strokeWidth="10"
+            android:pathData=" M50,20
+             L50,80
+"
+            />
+
+
+
+
+
+        <!--<path-->
+            <!--android:strokeColor="#a3a3a3"-->
+            <!--android:strokeWidth="1"-->
+            <!--android:pathData="M0,0-->
+                              <!--L100,0-->
+                              <!--L100,100-->
+                              <!--L0,100-->
+                              <!--L0,0"-->
+
+            <!--/>-->
+
+
+
+    </group>
+
+</vector>
