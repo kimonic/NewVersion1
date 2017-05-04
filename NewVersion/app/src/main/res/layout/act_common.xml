@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:background="@color/voilet"
+        android:layout_height="50dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/tv_title"
+                android:textSize="18sp"
+                android:gravity="center"
+                android:textColor="@color/mytextcolorwhite"
+                />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingLeft="20dp"
+            android:paddingStart="20dp"
+            android:paddingRight="0dp"
+            android:paddingEnd="0dp"
+            android:gravity="center_vertical">
+            <TextView
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:background="@drawable/zuofanhui"
+                android:id="@+id/tv_finisht"
+                />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical|end"
+                android:paddingRight="20dp"
+                android:paddingEnd="20dp"
+                android:paddingStart="0dp"
+                android:paddingLeft="0dp"
+                >
+
+                <TextView
+                    android:id="@+id/tv_open"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:textColor="@color/mytextcolorwhite"
+                    android:gravity="center"
+                    android:textSize="12sp" />
+            </LinearLayout>
+        </LinearLayout>
+    </FrameLayout>
+    <HorizontalScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/hsv_common"
+        >
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:id="@+id/ll_container"
+            >
+
+        </LinearLayout>
+    </HorizontalScrollView>
+    <android.support.v4.view.ViewPager
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/vp_common">
+
+    </android.support.v4.view.ViewPager>
+
+</LinearLayout>
