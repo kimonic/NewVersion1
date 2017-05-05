@@ -8,7 +8,7 @@ import java.io.IOException;
 import java.util.Map;
 
 import dingw.com.newversion.bean.LoginBean;
-import dingw.com.newversion.jsonParse.LoginJsonParse;
+import dingw.com.newversion.jsonparse.LoginJsonParse;
 import okhttp3.Call;
 import okhttp3.Callback;
 import okhttp3.FormBody;

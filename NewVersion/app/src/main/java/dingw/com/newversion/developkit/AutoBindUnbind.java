@@ -1,4 +1,4 @@
-package dingw.com.newversion.DevelopKit;
+package dingw.com.newversion.developkit;
 
 import android.content.Context;
 import android.provider.Settings;

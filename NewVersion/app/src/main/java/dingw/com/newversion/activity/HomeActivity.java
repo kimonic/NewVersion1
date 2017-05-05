@@ -1,7 +1,6 @@
 package dingw.com.newversion.activity;
 
 import android.content.Intent;
-import android.os.Bundle;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.AlertDialog;
@@ -18,7 +17,7 @@ import android.widget.TextView;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
-import dingw.com.newversion.DevelopKit.AutoBindUnbind;
+import dingw.com.newversion.developkit.AutoBindUnbind;
 import dingw.com.newversion.R;
 import dingw.com.newversion.base.BaseActivity;
 import dingw.com.newversion.customview.TopBar;

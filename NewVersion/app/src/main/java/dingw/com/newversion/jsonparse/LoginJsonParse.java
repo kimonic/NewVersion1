@@ -1,4 +1,4 @@
-package dingw.com.newversion.jsonParse;
+package dingw.com.newversion.jsonparse;
 
 
 import org.json.JSONException;
