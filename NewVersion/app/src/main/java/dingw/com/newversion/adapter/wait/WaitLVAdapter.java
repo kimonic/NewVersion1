@@ -10,6 +10,7 @@ import android.widget.TextView;
 import java.util.List;
 
 import dingw.com.newversion.R;
+import dingw.com.newversion.base.BaseBean;
 import dingw.com.newversion.base.CustomAdapter;
 import dingw.com.newversion.bean.wait.ListViewBean;
 import dingw.com.newversion.customview.MarqueeText;
@@ -21,7 +22,7 @@ import dingw.com.newversion.customview.MarqueeText;
 
 public class WaitLVAdapter extends CustomAdapter {
 
-    public WaitLVAdapter(Context context, List<Object> list) {
+    public WaitLVAdapter(Context context, List<BaseBean> list) {
         super(context, list);
     }
 

@@ -1,5 +1,6 @@
 package dingw.com.newversion.fragment.wait;
 
+import android.content.Intent;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ImageView;
@@ -16,7 +17,9 @@ import butterknife.ButterKnife;
 import butterknife.Unbinder;
 import dingw.com.newversion.R;
 import dingw.com.newversion.activity.StartCommonActivity;
+import dingw.com.newversion.activity.wait.MyActivity;
 import dingw.com.newversion.adapter.wait.WaitLVAdapter;
+import dingw.com.newversion.base.BaseBean;
 import dingw.com.newversion.base.BaseFragment;
 import dingw.com.newversion.bean.wait.ListViewBean;
 import dingw.com.newversion.utils.HeightUtils;
@@ -48,12 +51,12 @@ public class WaitFragment extends BaseFragment {
      * icon imageview
      */
     int resIdTop[] = {
-            R.drawable.money13x,
-            R.drawable.case2,
-            R.drawable.resolve,
-            R.drawable.counselor,
-            R.drawable.notice,
-            R.drawable.newlaw
+            R.drawable.wait_caiwu,
+            R.drawable.wait_anjian,
+            R.drawable.wait_piban,
+            R.drawable.wait_guwen,
+            R.drawable.wait_notice,
+            R.drawable.wait_newlaw
     };
 
     int contentIdTop[] = {
@@ -66,11 +69,11 @@ public class WaitFragment extends BaseFragment {
     };
 
     int resIdBottom[] = {
-            R.drawable.netizenconsult,
-            R.drawable.netizenentrust,
-            R.drawable.newlaw,
-            R.drawable.lawproduct,
-            R.drawable.lawcall,
+            R.drawable.wait_zixun,
+            R.drawable.wait_weituo,
+            R.drawable.wait_newlaw,
+            R.drawable.wait_chanpin,
+            R.drawable.wait_toubiao,
     };
 
     int contentIdBottom[] = {
@@ -81,7 +84,7 @@ public class WaitFragment extends BaseFragment {
             R.string.lawcall,
     };
 
-    private List<Object> listTop, listBottom;
+    private List<BaseBean> listTop, listBottom;
 
     @Override
     public int setResid() {
@@ -139,7 +142,7 @@ public class WaitFragment extends BaseFragment {
 
         //加载圆形图片
         Glide.with(getContext())
-                .load(R.drawable.test2)
+                .load(R.drawable.icon_girl)
                 .bitmapTransform(new CropCircleTransformation(getContext()))
                 .into(ivIcon);
 
@@ -147,8 +150,8 @@ public class WaitFragment extends BaseFragment {
         ivIcon.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {/**--------------------------*/
-//                Intent intent = new Intent(getActivity(), MyActivity.class);
-//                startActivityForResult(intent,1);
+                Intent intent = new Intent(getActivity(), MyActivity.class);
+                startActivityForResult(intent,1);
             }
         });
         ivEmail.setOnClickListener(new View.OnClickListener() {

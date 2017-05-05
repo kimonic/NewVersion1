@@ -11,7 +11,7 @@ public class Constant {
     public static final String WORK_BASEURL="http://ceshi.12348oa.com/flfw/";
     public static final String NOTICE_SEARCH_URL="http://ceshi.12348oa.com/flfw/bulletin/getList?seach=";
     public static final String MINUTE_SEARCH_URL="http://ceshi.12348oa.com/flfw/minute/getList??seach=";
-    public static final String TAG="test tag------------";
+    public static final String TAG="icon_boy tag------------";
     /**登录url连接*/
     public static final String LOGIN_URL="login/lawyerLoginApp";
     /**绑定解绑url连接*/

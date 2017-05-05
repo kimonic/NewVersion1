@@ -12,9 +12,9 @@ import java.util.List;
 
 public abstract class CustomAdapter extends BaseAdapter {
     public Context context;
-    protected List<Object> list;
+    protected List<BaseBean> list;
 
-    public CustomAdapter(Context context, List<Object> list) {
+    public CustomAdapter(Context context, List<BaseBean> list) {
         this.context = context;
         this.list = list;
     }
@@ -38,7 +38,7 @@ public abstract class CustomAdapter extends BaseAdapter {
         return context;
     }
 
-    public List<Object> getList() {
+    public List<BaseBean> getList() {
         return list;
     }
 

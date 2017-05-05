@@ -4,11 +4,8 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ProgressBar;
 
-import java.text.SimpleDateFormat;
 import java.util.ArrayList;
-import java.util.Date;
 import java.util.List;
-import java.util.Locale;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -85,7 +82,7 @@ public class ChatFragment extends BaseFragment implements XListView.IXListViewLi
 
     @Override
     public void initView() {
-        positionList=new ArrayList<Integer>(10);
+        positionList=new ArrayList<>(10);
         xlvFragcommon.setPullRefreshEnable(true);//下拉刷新
         xlvFragcommon.setPullLoadEnable(true);//上拉加载
         xlvFragcommon.setAutoLoadEnable(false);//底部自动加载
@@ -136,10 +133,7 @@ public class ChatFragment extends BaseFragment implements XListView.IXListViewLi
         xlvFragcommon.stopLoadMore();
         xlvFragcommon.setRefreshTime(getTime());
     }
-    /**获取当前系统时间*/
-    private String getTime() {
-        return new SimpleDateFormat("MM-dd HH:mm", Locale.CHINA).format(new Date());
-    }
+
 
     @Override
     public void onDestroyView() {

@@ -5,11 +5,8 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ProgressBar;
 
-import java.text.SimpleDateFormat;
 import java.util.ArrayList;
-import java.util.Date;
 import java.util.List;
-import java.util.Locale;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -18,6 +15,7 @@ import dingw.com.newversion.R;
 import dingw.com.newversion.activity.CommonActivity;
 import dingw.com.newversion.activity.wait.ChatActivity;
 import dingw.com.newversion.adapter.wait.NewsXLVAdapter;
+import dingw.com.newversion.base.BaseBean;
 import dingw.com.newversion.base.BaseFragment;
 import dingw.com.newversion.bean.wait.NewsBean;
 import dingw.com.newversion.widget.XListView;
@@ -35,7 +33,7 @@ public class NewsFragment extends BaseFragment implements XListView.IXListViewLi
     Unbinder unbinder;
 
     private NewsXLVAdapter adapter;
-    private List<Object> list;
+    private List<BaseBean> list;
 
     private CommonActivity.CommonActListener listener;
 
@@ -66,7 +64,7 @@ public class NewsFragment extends BaseFragment implements XListView.IXListViewLi
             NewsBean bean=new NewsBean();
             bean.setName("亦筝笙");
             bean.setState("[离线]");
-            bean.setResId(R.drawable.test2);
+            bean.setResId(R.drawable.icon_girl);
             list.add(bean);
         }
     }
@@ -133,8 +131,5 @@ public class NewsFragment extends BaseFragment implements XListView.IXListViewLi
         xlvFragcommon.setRefreshTime(getTime());
     }
 
-    /**获取当前系统时间*/
-    private String getTime() {
-        return new SimpleDateFormat("MM-dd HH:mm", Locale.CHINA).format(new Date());
-    }
+
 }

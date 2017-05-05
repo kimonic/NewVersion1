@@ -31,7 +31,7 @@
             <TextView
                 android:layout_width="25dp"
                 android:layout_height="25dp"
-                android:background="@drawable/zuofanhui"
+                android:background="@drawable/xvector_zuofanhui"
                 android:id="@+id/tv_finisht"
                 />
 

@@ -11,14 +11,14 @@
 
 
     <string-array name="imagearray">
-        <item>@drawable/banner_1</item>
-        <item>@drawable/banner_2</item>
+        <item>@drawable/platform_banner1</item>
+        <item>@drawable/platform_banner2</item>
     </string-array>
 
 
     <string-array name="dotsarray">
-        <item>@drawable/selectdots</item>
-        <item>@drawable/unselectdots</item>
+        <item>@drawable/xvector_seldots</item>
+        <item>@drawable/xvector_unseldots</item>
     </string-array>
 
 </resources>

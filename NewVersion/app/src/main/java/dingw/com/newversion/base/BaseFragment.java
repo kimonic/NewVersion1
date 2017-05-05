@@ -9,6 +9,10 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import java.text.SimpleDateFormat;
+import java.util.Date;
+import java.util.Locale;
+
 /**
  * Created by 12348 on 2017/5/3 0003.
  * fragment 基类
@@ -65,6 +69,10 @@ public abstract class BaseFragment extends Fragment implements BaseFunc,View.OnC
         if (getActivity()!=null){
             getActivity().finish();
         }
+    }
+    /**获取当前系统时间*/
+    public String getTime() {
+        return new SimpleDateFormat("MM-dd HH:mm", Locale.CHINA).format(new Date());
     }
 
 }

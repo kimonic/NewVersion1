@@ -1,7 +1,6 @@
 package dingw.com.newversion.activity;
 
 import android.content.Intent;
-import android.graphics.Point;
 import android.support.v4.app.Fragment;
 import android.support.v4.view.ViewPager;
 import android.view.LayoutInflater;
@@ -313,7 +312,7 @@ public class CommonActivity extends BaseActivity {
         if (isOpenShow) {
             tvOpen.setVisibility(View.VISIBLE);
             if (showText.equals("")){
-                tvOpen.setBackgroundResource(R.drawable.ic_add);
+                tvOpen.setBackgroundResource(R.drawable.xvector_add);
             }else {
                 LinearLayout.LayoutParams layoutParams=new LinearLayout.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT);
                 tvOpen.setLayoutParams(layoutParams);

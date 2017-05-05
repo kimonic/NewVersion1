@@ -17,6 +17,7 @@ import butterknife.Unbinder;
 import dingw.com.newversion.R;
 import dingw.com.newversion.activity.CommonActivity;
 import dingw.com.newversion.adapter.wait.EmailXLVAdapter;
+import dingw.com.newversion.base.BaseBean;
 import dingw.com.newversion.base.BaseFragment;
 import dingw.com.newversion.bean.wait.EMailBean;
 import dingw.com.newversion.utils.DialogUtils;
@@ -35,7 +36,7 @@ public class EMailFragment extends BaseFragment implements XListView.IXListViewL
     Unbinder unbinder;
 
     private EmailXLVAdapter adapter;
-    private List<Object> list;
+    private List<BaseBean> list;
     private CommonActivity.CommonActListener listener;
 
     @Override
@@ -137,10 +138,7 @@ public class EMailFragment extends BaseFragment implements XListView.IXListViewL
         xlvFragcommon.setRefreshTime(getTime());
     }
 
-    /**获取当前系统时间*/
-    private String getTime() {
-        return new SimpleDateFormat("MM-dd HH:mm", Locale.CHINA).format(new Date());
-    }
+
     @Override
     public void onDestroyView() {
         super.onDestroyView();

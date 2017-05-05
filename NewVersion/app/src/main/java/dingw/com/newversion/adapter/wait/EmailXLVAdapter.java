@@ -9,6 +9,7 @@ import android.widget.TextView;
 import java.util.List;
 
 import dingw.com.newversion.R;
+import dingw.com.newversion.base.BaseBean;
 import dingw.com.newversion.base.CustomAdapter;
 import dingw.com.newversion.bean.wait.EMailBean;
 
@@ -18,7 +19,7 @@ import dingw.com.newversion.bean.wait.EMailBean;
  */
 
 public class EmailXLVAdapter extends CustomAdapter {
-    public EmailXLVAdapter(Context context, List<Object> list) {
+    public EmailXLVAdapter(Context context, List<BaseBean> list) {
         super(context, list);
     }
 

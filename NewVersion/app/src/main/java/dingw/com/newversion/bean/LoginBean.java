@@ -1,11 +1,13 @@
 package dingw.com.newversion.bean;
 
+import dingw.com.newversion.base.BaseBean;
+
 /**
  * Created by 12348 on 2017/4/14 0014.
  * 登录--绑定--解绑bean
  */
 
-public class LoginBean {
+public class LoginBean extends BaseBean{
     private String state;
     private String type;
     private String name;

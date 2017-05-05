@@ -1,11 +1,13 @@
 package dingw.com.newversion.bean.wait;
 
+import dingw.com.newversion.base.BaseBean;
+
 /**
  * Created by 12348 on 2017/4/15 0015.
  * 主页--待办--email图标点击--通知bean
  */
 
-public class EMailBean {
+public class EMailBean  extends BaseBean {
     private String title;
     private String time;
     private String content;

@@ -51,7 +51,7 @@
             <TextView
                 android:layout_width="25dp"
                 android:layout_height="25dp"
-                android:background="@drawable/zuofanhui"
+                android:background="@drawable/xvector_zuofanhui"
                 android:id="@+id/textview_chatactfinish"
                 />
         </LinearLayout>
@@ -87,7 +87,7 @@
                 <ImageView
                     android:layout_width="20dp"
                     android:layout_height="20dp"
-                    android:src="@drawable/chat_emo_normal"
+                    android:src="@drawable/wait_chat_face"
                     android:id="@+id/imageview_chatact1"
                     android:contentDescription="@null"
                     />
@@ -95,7 +95,7 @@
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
-                    android:background="@drawable/bg_edittext_normal"
+                    android:background="@drawable/xshape_etbac_normal"
                     android:layout_marginLeft="10dp"
                     android:layout_marginRight="10dp"
                     android:textSize="16sp"
@@ -106,7 +106,7 @@
                 <ImageView
                     android:layout_width="20dp"
                     android:layout_height="20dp"
-                    android:src="@drawable/round"
+                    android:src="@drawable/xvector_rdadd"
                     android:id="@+id/imageview_chatact2"
                     android:contentDescription="@null"
                     />
@@ -115,7 +115,7 @@
                     android:layout_height="wrap_content"
                     android:textSize="16sp"
                     android:text="@string/fasong"
-                    android:background="@drawable/textroundbac2"
+                    android:background="@drawable/xshape_tvrdbac_bl"
                     android:paddingTop="5dp"
                     android:paddingBottom="5dp"
                     android:paddingLeft="10dp"

@@ -32,4 +32,10 @@ public class DialogUtils {
                 .setPositiveButton(positiveText,listener)
                 .show();
     }
+    public static void showDialogNoTitle(final Activity activity,int message,int positiveText,DialogInterface.OnClickListener listener){
+        AlertDialog.Builder dialog = new AlertDialog.Builder(activity);
+        dialog.setMessage(message)
+                .setPositiveButton(positiveText,listener)
+                .show();
+    }
 }

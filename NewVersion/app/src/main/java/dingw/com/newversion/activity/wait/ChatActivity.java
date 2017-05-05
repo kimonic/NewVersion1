@@ -3,7 +3,6 @@ package dingw.com.newversion.activity.wait;
 import android.content.Intent;
 import android.database.Cursor;
 import android.net.Uri;
-import android.os.Bundle;
 import android.os.Handler;
 import android.provider.MediaStore;
 import android.support.v4.app.FragmentManager;
@@ -301,9 +300,9 @@ public class ChatActivity extends BaseActivity {
         info.setXuhao(xuhao);
         info.setTime(sd.format(new Date()));
         if (flag == 1) {
-            info.setResId(R.drawable.test2);
+            info.setResId(R.drawable.icon_girl);
         } else {
-            info.setResId(R.drawable.test);
+            info.setResId(R.drawable.icon_boy);
         }
 
         if (photoPath!=null){
@@ -411,7 +410,7 @@ public class ChatActivity extends BaseActivity {
     }
 
     /**
-     * 判断即将删除的字符串是否是图片占位字符串tempText 如果是：则讲删除整个tempText
+     * 判断即将删除的字符串是否是图片占位字符串tempText 如果是：则将删除整个tempText
      **/
     private boolean isDeletePng(int cursor) {
         String st = "#[face/png/f_static_000.png]#";
@@ -455,10 +454,12 @@ public class ChatActivity extends BaseActivity {
         int iCursorStart = Selection.getSelectionStart((edit.getText()));
         int iCursorEnd = Selection.getSelectionEnd((edit.getText()));
         if (iCursorStart != iCursorEnd) {
-            ((Editable) edit.getText()).replace(iCursorStart, iCursorEnd, "");
+             edit.getText().replace(iCursorStart, iCursorEnd, "");
+//            ((Editable) edit.getText()).replace(iCursorStart, iCursorEnd, "");
         }
         int iCursor = Selection.getSelectionEnd((edit.getText()));
-        ((Editable) edit.getText()).insert(iCursor, text);
+         edit.getText().insert(iCursor, text);
+//        ((Editable) edit.getText()).insert(iCursor, text);
     }
 
     /**
@@ -477,12 +478,13 @@ public class ChatActivity extends BaseActivity {
      */
     private void initStaticFaces() {
         try {
-            staticFacesList = new ArrayList<String>();
+            staticFacesList = new ArrayList<>();
             String[] faces = getAssets().list("face/png");
             //将Assets中的表情名称转为字符串一一添加进staticFacesList
             for (int i = 0; i < faces.length; i++) {
                 staticFacesList.add(faces[i]);
             }
+
             //去掉删除图片
             staticFacesList.remove("emotion_del_normal.png");
         } catch (Exception e) {

@@ -47,7 +47,7 @@
             android:id="@+id/header_progressbar"
             android:layout_width="30dp"
             android:layout_height="30dp"
-            android:indeterminateDrawable="@drawable/progressbar"
+            android:indeterminateDrawable="@drawable/xanim_progressbar"
             android:layout_toLeftOf="@id/header_text_layout"
             android:layout_marginRight="30dp"
             android:layout_centerVertical="true"
@@ -62,7 +62,7 @@
             android:layout_marginRight="30dp"
             android:layout_centerVertical="true"
             android:contentDescription="@null"
-            android:src="@drawable/arrrrr" />
+            android:src="@drawable/xvector_arrowup_black" />
 
     </RelativeLayout>
 

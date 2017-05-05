@@ -20,7 +20,61 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme">
+        android:theme="@style/AppTheme"
+        android:name=".App"
+        >
+
+        <!--1111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111-->
+        <!--微信-->
+        <activity
+            android:name=".wxapi.WXEntryActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+
+        qq精简版
+        <activity
+            android:name="com.umeng.qq.tencent.AuthActivity"
+            android:launchMode="singleTask"
+            android:noHistory="true" >
+
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+                <data android:scheme="tencent100424468" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name="com.umeng.qq.tencent.AssistActivity"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar"
+            android:configChanges="orientation|keyboardHidden|screenSize"/>
+
+        <!--&lt;!&ndash;分享编辑页&ndash;&gt;-->
+        <!--<activity-->
+            <!--android:name="com.umeng.socialize.editorpage.ShareActivity"-->
+            <!--android:theme="@style/Theme.UMDefault"-->
+            <!--android:excludeFromRecents="true"-->
+            <!--/>-->
+
+        <!--添加友盟apkey-->
+        <meta-data
+            android:name="UMENG_APPKEY"
+            android:value="58ed984f1061d266c0002558" >
+        </meta-data>
+
+
+
+
+
+
+        <!--1111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111-->
+
+
+
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -33,6 +87,8 @@
         <activity android:name=".activity.HomeActivity"/>
         <activity android:name=".activity.CommonActivity"/>
         <activity android:name=".activity.wait.ChatActivity"/>
+        <activity android:name=".activity.wait.MyActivity"/>
+        <activity android:name=".activity.wait.MyItemActivity"/>
 
     </application>
 

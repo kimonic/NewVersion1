@@ -97,7 +97,7 @@ public class BindOrUnbindActivity extends BaseActivity {
         tvTemp1.setVisibility(View.GONE);
         tvTemp2.setVisibility(View.GONE);
 
-        GlideImageLoader.getInstance().displayCircleImage(this, R.drawable.test2, ivIcon);
+        GlideImageLoader.getInstance().displayCircleImage(this, R.drawable.icon_girl, ivIcon);
 
 
         if (ifBind == 1) {

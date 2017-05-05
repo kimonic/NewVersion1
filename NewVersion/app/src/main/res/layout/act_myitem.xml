@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+    <dingw.com.newversion.customview.TopBar
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:id="@+id/topbar_myfavorite"
+        custom:centerText="@string/myfavorite"
+        custom:centerTextColor="@color/mywhite"
+        >
+
+    </dingw.com.newversion.customview.TopBar>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/textview_myfavorite"
+        android:text="@string/contractmode"
+        android:gravity="center"
+        android:textSize="20sp"
+        android:textColor="@color/colorAccent"
+        android:visibility="gone"
+        />
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/colorAccent"
+        android:id="@+id/imageview_myfavorite"
+        android:visibility="gone"
+        android:contentDescription="@null"
+        />
+    <ListView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/listview_myactivityitem"
+        android:visibility="gone"
+        >
+
+    </ListView>
+
+</LinearLayout>

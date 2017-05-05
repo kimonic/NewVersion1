@@ -160,7 +160,7 @@ public class XFooterView extends LinearLayout {
     }
 
     /**
-     * loading status
+     * main_guide status
      */
     public void loading() {
         mHintView.setVisibility(View.GONE);

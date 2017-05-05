@@ -329,6 +329,27 @@
     <string name="bangdinghoucai">绑定后才能进行登录操作,是否马上绑定?</string>
     <string name="meiyouweidu">没有未读消息通知了!</string>
     <string name="tishi">提示</string>
+    <string name="qingchuhuancun">清除缓存成功</string>
+    <string name="kong"></string>
+    <string name="nindebanben">您的应用版本已是最新!</string>
+    <string name="ok">ok</string>
+    <string name="shoujishiyong">手机端使用说明</string>
+    <string name="diannaoshiyong">电脑端使用说明</string>
+    <string name="tuisongtongzhi">推送通知设置</string>
+    <string name="yixiazai">已下载文件</string>
+    <string name="xiaoxituisong">消息推送</string>
+    <string name="tuisongmiandarao">推送免打扰  23:00-7:00</string>
+    <string name="bensuogonggaotuisong">本所公告推送</string>
+    <string name="huiyituisong">会议记录推送</string>
+    <string name="kaitingtuisong">开庭推送</string>
+    <string name="baoquantuisong">保全到期推送</string>
+    <string name="pibantuisong">批办申请推送</string>
+    <string name="guwentuisong">顾问工单推送</string>
+    <string name="falvtuisong">法律服务招投标推送</string>
+    <string name="xinfatuisong">新法速递推送</string>
+    <string name="wangmintuisong">网民委托推送</string>
+    <string name="goumaituisong">法律服务购买推送</string>
+    <string name="benjiweianzhuang">本机未安装QQ应用!</string>
 
 
 </resources>

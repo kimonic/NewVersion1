@@ -10,6 +10,7 @@ import android.widget.TextView;
 import java.util.List;
 
 import dingw.com.newversion.R;
+import dingw.com.newversion.base.BaseBean;
 import dingw.com.newversion.base.CustomAdapter;
 import dingw.com.newversion.bean.wait.NewsBean;
 import dingw.com.newversion.utils.GlideImageLoader;
@@ -22,7 +23,7 @@ import dingw.com.newversion.utils.GlideImageLoader;
 
 public class NewsXLVAdapter extends CustomAdapter {
 
-    public NewsXLVAdapter(Context context, List<Object> list) {
+    public NewsXLVAdapter(Context context, List<BaseBean> list) {
         super(context, list);
     }
 

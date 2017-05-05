@@ -1,12 +1,14 @@
 package dingw.com.newversion.bean.wait;
 
+import dingw.com.newversion.base.BaseBean;
+
 /**
  * Created by 12348 on 2017/3/24 0024.
  *
  * MyActivity,waitfragment中listview的数据对象
  */
 
-public class ListViewBean {
+public class ListViewBean  extends BaseBean {
     /**字符串内容*/
     private String content;
     /**资源id*/

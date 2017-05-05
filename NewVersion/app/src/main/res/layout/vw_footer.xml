@@ -12,7 +12,7 @@
             android:id="@+id/footer_progressbar"
             android:layout_width="30dp"
             android:layout_height="30dp"
-            android:indeterminateDrawable="@drawable/progressbar"
+            android:indeterminateDrawable="@drawable/xanim_progressbar"
             android:layout_centerInParent="true"
             android:visibility="invisible" />
 
@@ -31,7 +31,7 @@
             android:layout_marginRight="30dp"
             android:layout_toLeftOf="@id/footer_hint_text"
             android:contentDescription="@null"
-            android:src="@drawable/arrrrr"
+            android:src="@drawable/xvector_arrowup_black"
             android:visibility="gone" />
     </RelativeLayout>
 

@@ -4,9 +4,7 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.drawable.Drawable;
 import android.os.Build;
-import android.os.Bundle;
 import android.provider.Settings;
-import android.support.annotation.Nullable;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
@@ -100,13 +98,13 @@ public class LoginActivity extends BaseActivity {
         tvTemp.setOnClickListener(this);
         /**------------------------------需删除-------------------------------------------------------*/
         //设置圆形图片
-        GlideImageLoader.getInstance().displayCircleImage(this, R.drawable.test2, ivHead);
+        GlideImageLoader.getInstance().displayCircleImage(this, R.drawable.icon_girl, ivHead);
         //设置绑定右侧图片
         Drawable drawable;
         if (Build.VERSION.SDK_INT<21){
-            drawable= getResources().getDrawable(R.drawable.right);
+            drawable= getResources().getDrawable(R.drawable.xvector_right);
         }else {
-            drawable= getResources().getDrawable(R.drawable.right,null);
+            drawable= getResources().getDrawable(R.drawable.xvector_right,null);
         }
         drawable.setBounds(0, 0, 50, 50);
         tvUnbind.setCompoundDrawables(null, null, drawable, null);

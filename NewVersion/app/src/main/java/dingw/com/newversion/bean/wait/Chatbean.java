@@ -1,11 +1,13 @@
 package dingw.com.newversion.bean.wait;
 
+import dingw.com.newversion.base.BaseBean;
+
 /**
  * Created by 12348 on 2017/4/17 0017.
  * 聊天详情bean
  */
 
-public class Chatbean {
+public class Chatbean  extends BaseBean {
     private String name;
     private String title;
     private String time;

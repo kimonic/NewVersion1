@@ -66,5 +66,9 @@ public class SaveUtils {
     public int getIntInfo(String key){
         return sharedPreferences.getInt(key,-1);
     }
+    /**取出数据*/
+    public int getIntInfo(String key,int def){
+        return sharedPreferences.getInt(key,def);
+    }
 
 }

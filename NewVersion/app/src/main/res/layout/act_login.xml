@@ -43,8 +43,8 @@
             android:layout_marginStart="10dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:drawableLeft="@drawable/icon_user_nor"
-            android:drawableStart="@drawable/icon_user_nor"
+            android:drawableLeft="@drawable/login_user"
+            android:drawableStart="@drawable/login_user"
             android:gravity="center"
             android:text="@string/zhiyezhenghao"
             android:textStyle="bold"
@@ -54,7 +54,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/et_zhiyezhenghao"
-            android:background="@drawable/bg_edittext"
+            android:background="@drawable/xsel_etbac"
             android:hint="@string/zhenghao_hint"
             android:textSize="16sp"
             android:layout_marginEnd="20dp"
@@ -62,8 +62,8 @@
             android:paddingLeft="5dp"
             android:layout_marginRight="20dp"
             android:layout_marginLeft="5dp"
-            android:drawableRight="@drawable/closevec"
-            android:drawableEnd="@drawable/closevec"
+            android:drawableRight="@drawable/xvector_close"
+            android:drawableEnd="@drawable/xvector_close"
             android:paddingRight="5dp"
             android:paddingTop="5dp"
             android:paddingBottom="5dp"/>
@@ -81,14 +81,14 @@
             android:text="@string/name"
             android:textStyle="bold"
 
-            android:drawableLeft="@drawable/icon_find_nor"
-            android:drawableStart="@drawable/icon_find_nor"
+            android:drawableLeft="@drawable/login_find"
+            android:drawableStart="@drawable/login_find"
             android:textSize="16sp"/>
         <EditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/et_name"
-            android:background="@drawable/bg_edittext"
+            android:background="@drawable/xsel_etbac"
             android:hint="@string/name_hint"
             android:layout_marginRight="20dp"
             android:layout_marginLeft="5dp"
@@ -113,14 +113,14 @@
             android:textStyle="bold"
             android:layout_marginLeft="10dp"
             android:layout_marginStart="10dp"
-            android:drawableLeft="@drawable/icon_find_nor"
-            android:drawableStart="@drawable/icon_find_nor"
+            android:drawableLeft="@drawable/login_find"
+            android:drawableStart="@drawable/login_find"
             android:textSize="16sp"/>
         <EditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/et_loginpassword"
-            android:background="@drawable/bg_edittext"
+            android:background="@drawable/xsel_etbac"
             android:layout_marginRight="20dp"
             android:layout_marginLeft="5dp"
             android:textSize="16sp"
@@ -142,7 +142,7 @@
         android:textSize="20sp"
         android:id="@+id/bt_login"
         android:textColor="@color/mytextcolorwhite"
-        android:background="@drawable/roundrect"
+        android:background="@drawable/xshape_rdbac_volit"
         android:text="@string/login"/>
 
     <TextView

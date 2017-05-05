@@ -32,7 +32,7 @@
                 android:id="@+id/tv_finish"
                 android:layout_width="25dp"
                 android:layout_height="match_parent"
-                android:background="@drawable/ic_back" />
+                android:background="@drawable/xvector_back" />
         </LinearLayout>
 
         <LinearLayout
@@ -48,7 +48,7 @@
                 android:id="@+id/tv_add"
                 android:layout_width="25dp"
                 android:layout_height="match_parent"
-                android:background="@drawable/ic_add"
+                android:background="@drawable/xvector_add"
                 android:visibility="gone"
                 />
         </LinearLayout>
