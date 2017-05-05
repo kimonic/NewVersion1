@@ -7,7 +7,7 @@ import android.os.Bundle;
 import android.util.DisplayMetrics;
 import android.util.Log;
 
-import dingw.com.newversion.DevelopKit.AutoBindUnbind;
+import dingw.com.newversion.developkit.AutoBindUnbind;
 import dingw.com.newversion.activity.LoginActivity;
 
 public class MainActivity extends AppCompatActivity {
