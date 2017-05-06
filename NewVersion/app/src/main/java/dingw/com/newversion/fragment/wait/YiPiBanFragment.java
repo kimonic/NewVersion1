@@ -57,7 +57,7 @@ public class YiPiBanFragment extends RefreshBaseFragment {
             bean.setContent("哭死");
             bean.setTime("接案时间");
             bean.setExactTime("2016-09-20  00:00");
-            list.add(bean);
+            list.add(bean);11
         }
     }
 
