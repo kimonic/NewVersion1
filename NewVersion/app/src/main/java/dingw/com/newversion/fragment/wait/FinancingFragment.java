@@ -12,30 +12,25 @@ import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.Unbinder;
 import dingw.com.newversion.R;
-import dingw.com.newversion.activity.CommonActivity;
 import dingw.com.newversion.activity.wait.ChatActivity;
+import dingw.com.newversion.adapter.wait.FinancingXLVAdapter;
 import dingw.com.newversion.adapter.wait.NewsXLVAdapter;
 import dingw.com.newversion.base.BaseBean;
 import dingw.com.newversion.base.BaseFragment;
-import dingw.com.newversion.bean.wait.NewsBean;
+import dingw.com.newversion.bean.wait.FinancingBean;
 import dingw.com.newversion.widget.XListView;
 
 /**
- * Created by 12348 on 2017/5/4 0004.
- * 主页--待办--email图标点击---消息fragment
+ * Created by 12348 on 2017/5/6 0006.
+ * 加载fragment集合
  */
 
-public class NewsFragment extends BaseFragment implements XListView.IXListViewListener {
+public class FinancingFragment extends BaseFragment implements XListView.IXListViewListener {
     @BindView(R.id.xlv_fragcommon)
     XListView xlvFragcommon;
     @BindView(R.id.pgb_fragcommon)
     ProgressBar pgbFragcommon;
-
-    private NewsXLVAdapter adapter;
     private List<BaseBean> list;
-
-    private CommonActivity.CommonActListener listener;
-
 
 
     @Override
@@ -43,7 +38,10 @@ public class NewsFragment extends BaseFragment implements XListView.IXListViewLi
         return R.layout.frag_common;
     }
 
-
+    @Override
+    public void initContentView() {
+        super.initContentView();
+    }
 
     @Override
     public void onClick(View v) {
@@ -52,37 +50,29 @@ public class NewsFragment extends BaseFragment implements XListView.IXListViewLi
 
     @Override
     public void initData() {
-        list=new ArrayList<>();//数据源
-        for (int i = 0; i < 30; i++) {
-            NewsBean bean=new NewsBean();
-            bean.setName("亦筝笙");
-            bean.setState("[离线]");
-            bean.setResId(R.drawable.icon_girl);
-            list.add(bean);
+        list=new ArrayList<>();
+        for (int i = 0; i < 20; i++) {
+            FinancingBean financingBean=new FinancingBean("分配金额","1231元","发票编号","100","业务来源",
+                    "顾问单位|测试顾问","录入时间","2016-08-29  09:54");
+            list.add(financingBean);
         }
     }
 
     @Override
     public void initView() {
-        listener =new CommonActivity.CommonActListener() {
-            @Override
-            public void clickEvent() {
 
-            }
-        };
-        ((CommonActivity)getActivity()).setListener1(listener);
         xlvFragcommon.setPullRefreshEnable(true);//下拉刷新
         xlvFragcommon.setPullLoadEnable(true);//上拉加载
         xlvFragcommon.setAutoLoadEnable(true);//底部自动加载
         xlvFragcommon.setXListViewListener(this);//监听器
         xlvFragcommon.setRefreshTime(getTime());//加载时间
-        adapter=new NewsXLVAdapter(getActivity(),list);//适配器
+        FinancingXLVAdapter adapter=new FinancingXLVAdapter(getActivity(),list);
         xlvFragcommon.setAdapter(adapter);
         xlvFragcommon.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                Intent intent=new Intent(getActivity(), ChatActivity.class);
-                startActivity(intent);
+//                Intent intent=new Intent(getActivity(), ChatActivity.class);
+//                startActivity(intent);
             }
         });
 
@@ -90,6 +80,7 @@ public class NewsFragment extends BaseFragment implements XListView.IXListViewLi
         //-----------------------------------------------------
         pgbFragcommon.setVisibility(View.GONE);
         xlvFragcommon.setVisibility(View.VISIBLE);
+
     }
 
     @Override
@@ -101,9 +92,6 @@ public class NewsFragment extends BaseFragment implements XListView.IXListViewLi
     public void initLoad() {
 
     }
-
-
-
     @Override
     public void onRefresh() {
         onLoad();
@@ -119,6 +107,4 @@ public class NewsFragment extends BaseFragment implements XListView.IXListViewLi
         xlvFragcommon.stopLoadMore();
         xlvFragcommon.setRefreshTime(getTime());
     }
-
-
 }

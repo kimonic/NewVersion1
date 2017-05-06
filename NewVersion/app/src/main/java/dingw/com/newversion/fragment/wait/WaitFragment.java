@@ -17,6 +17,7 @@ import butterknife.ButterKnife;
 import butterknife.Unbinder;
 import dingw.com.newversion.R;
 import dingw.com.newversion.activity.StartCommonActivity;
+import dingw.com.newversion.activity.TwoTopButtonActivity;
 import dingw.com.newversion.activity.wait.MyActivity;
 import dingw.com.newversion.adapter.wait.WaitLVAdapter;
 import dingw.com.newversion.base.BaseBean;
@@ -134,12 +135,6 @@ public class WaitFragment extends BaseFragment {
 
         HeightUtils.setFixHeight(lvWait1);
         HeightUtils.setFixHeight(lvWait2);
-
-
-        setListviewClick(lvWait1, 1);
-        setListviewClick(lvWait2, 2);
-
-
         //加载圆形图片
         Glide.with(getContext())
                 .load(R.drawable.icon_girl)
@@ -147,19 +142,7 @@ public class WaitFragment extends BaseFragment {
                 .into(ivIcon);
 
 
-        ivIcon.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {/**--------------------------*/
-                Intent intent = new Intent(getActivity(), MyActivity.class);
-                startActivityForResult(intent,1);
-            }
-        });
-        ivEmail.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                StartCommonActivity.startAct(getActivity(), new String[]{"通知", "消息"}, new int[]{56, 57}, "通知", true, "全部已读");
-            }
-        });
+
     }
 
     private void setListviewClick(ListView listView, final int type) {
@@ -194,23 +177,23 @@ public class WaitFragment extends BaseFragment {
     }
 
     private void handleEvent(int position, int type) {
-//        switch (type) {
-//            case 1:
-//                switch (position) {
-//                    case 0://待办--财务
-//                        StartCommonActivity.startCommonActivity(getActivity(), new String[]{"未到账", "可提现", "可提押金"}, new int[]{1, 0, 1}, "财务", false, "");
-//                        break;
-//                    case 1://待办--案件
-//                        Intent intent = new Intent(getActivity(), CaseTwoActivity.class);
-//                        intent.putExtra("count", new int[]{4, 2});
-//                        intent.putExtra("fragType1", new int[]{0, 32, 0, 0});
-//                        intent.putExtra("fragType2", new int[]{0, 33});
-//                        intent.putExtra("label1", new String[]{"未批办", "已批办", "一周开庭", "30天保全"});
-//                        intent.putExtra("label2", new String[]{"未批办", "已批办"});
-//                        intent.putExtra("top1", "诉讼案件");
-//                        intent.putExtra("top2", "非诉讼案件");
-//                        startActivity(intent);
-//                        break;
+        switch (type) {
+            case 1:
+                switch (position) {
+                    case 0://待办--财务
+                        StartCommonActivity.startAct(getActivity(), new String[]{"未到账", "可提现", "可提押金"}, new int[]{1, 0, 1}, "财务", false, "");
+                        break;
+                    case 1://待办--案件
+                        Intent intent = new Intent(getActivity(), TwoTopButtonActivity.class);
+                        intent.putExtra("count", new int[]{4, 2});
+                        intent.putExtra("fragType1", new int[]{0, 32, 0, 0});
+                        intent.putExtra("fragType2", new int[]{0, 33});
+                        intent.putExtra("label1", new String[]{"未批办", "已批办", "一周开庭", "30天保全"});
+                        intent.putExtra("label2", new String[]{"未批办", "已批办"});
+                        intent.putExtra("top1", "诉讼案件");
+                        intent.putExtra("top2", "非诉讼案件");
+                        startActivity(intent);
+                        break;
 //                    case 2://待办--批办
 //                        StartCommonActivity.startCommonActivity(getActivity(), new String[]{"诉讼", "非诉讼"}, new int[]{0, 0}, "未批办", false, "");
 //                        break;
@@ -225,10 +208,10 @@ public class WaitFragment extends BaseFragment {
 //                        break;
 //                    case 6:
 //                        break;
-//                }
-//                break;
-//            case 2:
-//                switch (position) {
+                }
+                break;
+            case 2:
+                switch (position) {
 //                    case 0:
 //                        StartCommonActivity.startCommonActivity(getActivity(), new String[]{"等待处理"}, new int[]{35}, "网民咨询", false, "");
 //                        break;
@@ -244,9 +227,9 @@ public class WaitFragment extends BaseFragment {
 //                    case 4:
 //                        StartCommonActivity.startCommonActivity(getActivity(), new String[]{""}, new int[]{0}, "法律服务招投标", false, "");
 //                        break;
-//                }
-//                break;
-//        }
+                }
+                break;
+        }
 
 
     }
@@ -254,7 +237,21 @@ public class WaitFragment extends BaseFragment {
 
     @Override
     public void initListener() {
-
+        setListviewClick(lvWait1, 1);
+        setListviewClick(lvWait2, 2);
+        ivIcon.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {/**--------------------------*/
+                Intent intent = new Intent(getActivity(), MyActivity.class);
+                startActivityForResult(intent,1);
+            }
+        });
+        ivEmail.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                StartCommonActivity.startAct(getActivity(), new String[]{"通知", "消息"}, new int[]{56, 57}, "通知", true, "全部已读");
+            }
+        });
     }
 
     @Override

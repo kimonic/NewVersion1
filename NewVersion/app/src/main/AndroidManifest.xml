@@ -89,6 +89,7 @@
         <activity android:name=".activity.wait.ChatActivity"/>
         <activity android:name=".activity.wait.MyActivity"/>
         <activity android:name=".activity.wait.MyItemActivity"/>
+        <activity android:name=".activity.TwoTopButtonActivity"/>
 
     </application>
 

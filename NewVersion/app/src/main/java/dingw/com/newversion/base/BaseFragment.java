@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -12,6 +13,9 @@ import android.view.ViewGroup;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Locale;
+
+import butterknife.ButterKnife;
+import butterknife.Unbinder;
 
 /**
  * Created by 12348 on 2017/5/3 0003.
@@ -23,6 +27,7 @@ public abstract class BaseFragment extends Fragment implements BaseFunc,View.OnC
     private ViewGroup container;
     private LayoutInflater inflater;
     private int resId;
+    Unbinder unbinder;
 
 
 
@@ -50,6 +55,10 @@ public abstract class BaseFragment extends Fragment implements BaseFunc,View.OnC
     @Override
     public void initContentView() {
         view=inflater.inflate(resId,container,false);
+        if (getView()!=null){
+            unbinder = ButterKnife.bind(this, getView());
+        }
+
     }
     /**启动下一个activity*/
     protected void openActivity(Class<? extends BaseActivity> toActivity) {
@@ -74,5 +83,11 @@ public abstract class BaseFragment extends Fragment implements BaseFunc,View.OnC
     public String getTime() {
         return new SimpleDateFormat("MM-dd HH:mm", Locale.CHINA).format(new Date());
     }
+    @Override
+    public void onDestroyView() {
+        super.onDestroyView();
+        unbinder.unbind();
+    }
+
 
 }

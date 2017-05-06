@@ -1,13 +1,15 @@
 package dingw.com.newversion.fragment;
 
-import android.os.Bundle;
 import android.support.v4.app.Fragment;
 
 import java.util.ArrayList;
 import java.util.List;
 
 import dingw.com.newversion.fragment.wait.EMailFragment;
+import dingw.com.newversion.fragment.wait.FeiYIPiBanFragment;
+import dingw.com.newversion.fragment.wait.FinancingFragment;
 import dingw.com.newversion.fragment.wait.NewsFragment;
+import dingw.com.newversion.fragment.wait.YiPiBanFragment;
 
 /**
  * Created by 12348 on 2017/5/3 0003.
@@ -23,11 +25,11 @@ public class FragmentFactory {
     }
     /**取得要加载的fragment集合*/
     public List<Fragment> getFragmentList(){
-        List<Fragment> list=new ArrayList<Fragment>();
+        List<Fragment> list=new ArrayList<>();
 
         if (fragmentType.length>0){
-            for (int i = 0; i < fragmentType.length; i++) {
-                list.add(getFragment(fragmentType[i]));
+           for(int i:fragmentType){
+                list.add(getFragment(i));
             }
         }
         return list;
@@ -36,12 +38,12 @@ public class FragmentFactory {
     private Fragment getFragment(int type) {
 
         switch (type){
-//            case 0:
-//                fragment=new Fragment_NoContent();
-//                break;
-//            case 1:
-//                fragment=new Fragment_Financing();
-//                break;
+            case 0:
+                fragment=new NoContentFragment();
+                break;
+            case 1:
+                fragment=new FinancingFragment();
+                break;
 //            case 2:
 //                fragment =new Fragment_Test();
 //                break;
@@ -152,12 +154,12 @@ public class FragmentFactory {
 //            case 31://工作--会议记录
 //                createNoticeFrag("http://ceshi.12348oa.com/flfw/minute/getList?page=",2);
 //                break;
-//            case 32://待办--案件--诉讼案件--已批办
-//                fragment= new FragmentYiPiBan();
-//                break;
-//            case 33://待办--案件--a非诉讼案件--已批办
-//                fragment=new FragmentFeiYIPiBan();
-//                break;
+            case 32://待办--案件--诉讼案件--已批办
+                fragment= new YiPiBanFragment();
+                break;
+            case 33://待办--案件--a非诉讼案件--已批办
+                fragment=new FeiYIPiBanFragment();
+                break;
 //            case 34://待办--顾问--未完成工单
 //                fragment=new FragmentConsultantUNdone();
 //                break;
