@@ -92,14 +92,6 @@ public class WaitFragment extends BaseFragment {
         return R.layout.frag_wait;
     }
 
-    @Override
-    public void initContentView() {
-        super.initContentView();
-        if (getView()!=null){
-            unbinder = ButterKnife.bind(this, getView());
-        }
-
-    }
 
     @Override
     public void onClick(View v) {
@@ -194,39 +186,37 @@ public class WaitFragment extends BaseFragment {
                         intent.putExtra("top2", "非诉讼案件");
                         startActivity(intent);
                         break;
-//                    case 2://待办--批办
-//                        StartCommonActivity.startCommonActivity(getActivity(), new String[]{"诉讼", "非诉讼"}, new int[]{0, 0}, "未批办", false, "");
-//                        break;
-//                    case 3:
-//                        StartCommonActivity.startCommonActivity(getActivity(), new String[]{"未受理工单", "未完成工单", "30天内到期单位"}, new int[]{0, 34, 0}, "顾问", false, "");
-//                        break;
-//                    case 4:
-//                        StartCommonActivity.startCommonActivity(getActivity(), new String[]{"未读公告"}, new int[]{30}, "未读公告", false, "");
-//                        break;
-//                    case 5:
-//                        StartCommonActivity.startCommonActivity(getActivity(), new String[]{"未读新法"}, new int[]{36}, "未读新法", false, "");
-//                        break;
-//                    case 6:
-//                        break;
+                    case 2://待办--批办
+                        StartCommonActivity.startAct(getActivity(), new String[]{"诉讼", "非诉讼"}, new int[]{0, 0}, "未批办", false, "");
+                        break;
+                    case 3:
+                        StartCommonActivity.startAct(getActivity(), new String[]{"未受理工单", "未完成工单", "30天内到期单位"}, new int[]{0, 34, 0}, "顾问", false, "");
+                        break;
+                    case 4:
+                        StartCommonActivity.startAct(getActivity(), new String[]{"未读公告"}, new int[]{30}, "未读公告", false, "");
+                        break;
+                    case 5:
+                        StartCommonActivity.startAct(getActivity(), new String[]{"未读新法"}, new int[]{36}, "未读新法", false, "");
+                        break;
                 }
                 break;
             case 2:
                 switch (position) {
-//                    case 0:
-//                        StartCommonActivity.startCommonActivity(getActivity(), new String[]{"等待处理"}, new int[]{35}, "网民咨询", false, "");
-//                        break;
-//                    case 1:
-//                        StartCommonActivity.startCommonActivity(getActivity(), new String[]{""}, new int[]{0}, "网民委托", false, "");
-//                        break;
-//                    case 2:
-//                        StartCommonActivity.startCommonActivity(getActivity(), new String[]{""}, new int[]{0}, "委托订单", false, "");
-//                        break;
-//                    case 3:
-//                        StartCommonActivity.startCommonActivity(getActivity(), new String[]{""}, new int[]{0}, "法律服务订单", false, "");
-//                        break;
-//                    case 4:
-//                        StartCommonActivity.startCommonActivity(getActivity(), new String[]{""}, new int[]{0}, "法律服务招投标", false, "");
-//                        break;
+                    case 0:
+                        StartCommonActivity.startAct(getActivity(), new String[]{"等待处理"}, new int[]{35}, "网民咨询", false, "");
+                        break;
+                    case 1:
+                        StartCommonActivity.startAct(getActivity(), new String[]{""}, new int[]{0}, "网民委托", false, "");
+                        break;
+                    case 2:
+                        StartCommonActivity.startAct(getActivity(), new String[]{""}, new int[]{0}, "委托订单", false, "");
+                        break;
+                    case 3:
+                        StartCommonActivity.startAct(getActivity(), new String[]{""}, new int[]{0}, "法律服务订单", false, "");
+                        break;
+                    case 4:
+                        StartCommonActivity.startAct(getActivity(), new String[]{""}, new int[]{0}, "法律服务招投标", false, "");
+                        break;
                 }
                 break;
         }
@@ -241,7 +231,7 @@ public class WaitFragment extends BaseFragment {
         setListviewClick(lvWait2, 2);
         ivIcon.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v) {/**--------------------------*/
+            public void onClick(View v) {
                 Intent intent = new Intent(getActivity(), MyActivity.class);
                 startActivityForResult(intent,1);
             }
@@ -259,10 +249,4 @@ public class WaitFragment extends BaseFragment {
 
     }
 
-
-    @Override
-    public void onDestroyView() {
-        super.onDestroyView();
-        unbinder.unbind();
-    }
 }

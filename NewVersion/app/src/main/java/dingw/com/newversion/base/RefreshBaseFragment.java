@@ -20,6 +20,14 @@ public abstract class RefreshBaseFragment extends BaseFragment implements XListV
     @BindView(R.id.pgb_fragcommon)
     ProgressBar pgbFragcommon;
 
+    public XListView getXlvFragcommon() {
+        return xlvFragcommon;
+    }
+
+    public ProgressBar getPgbFragcommon() {
+        return pgbFragcommon;
+    }
+
     @Override
     public int setResid() {
         return R.layout.frag_common;
@@ -36,7 +44,7 @@ public abstract class RefreshBaseFragment extends BaseFragment implements XListV
 
 
         //-----------------------------------------------------
-        showXlistview();
+        showProgressbar();
     }
 
     /**     * 设置适配器     */
@@ -83,9 +91,11 @@ public abstract class RefreshBaseFragment extends BaseFragment implements XListV
         onLoad();
     }
     /**xlistview加载完成后取消加载提示*/
-    private void onLoad() {
+    public void onLoad() {
         xlvFragcommon.stopRefresh();
         xlvFragcommon.stopLoadMore();
         xlvFragcommon.setRefreshTime(getTime());
+        showXlistview();
+
     }
 }

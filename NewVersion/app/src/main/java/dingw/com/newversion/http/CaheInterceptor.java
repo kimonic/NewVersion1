@@ -14,11 +14,11 @@ import okhttp3.Response;
 /**
  * caheInterceptor
  */
-public class CaheInterceptor implements Interceptor {
+class CaheInterceptor implements Interceptor {
 
     private Context context;
 
-    public CaheInterceptor(Context context) {
+    CaheInterceptor(Context context) {
         this.context = context;
     }
 

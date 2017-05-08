@@ -90,6 +90,8 @@
         <activity android:name=".activity.wait.MyActivity"/>
         <activity android:name=".activity.wait.MyItemActivity"/>
         <activity android:name=".activity.TwoTopButtonActivity"/>
+        <activity android:name=".activity.wait.NewLawExpressActivity"/>
+        <activity android:name=".activity.wait.NetizenConsultDeActivity"/>
 
     </application>
 

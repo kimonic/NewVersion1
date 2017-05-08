@@ -1,14 +1,19 @@
 package dingw.com.newversion.fragment;
 
+import android.os.Bundle;
 import android.support.v4.app.Fragment;
 
 import java.util.ArrayList;
 import java.util.List;
 
+import dingw.com.newversion.fragment.wait.ConsultantUNdoneFragment;
 import dingw.com.newversion.fragment.wait.EMailFragment;
 import dingw.com.newversion.fragment.wait.FeiYIPiBanFragment;
 import dingw.com.newversion.fragment.wait.FinancingFragment;
+import dingw.com.newversion.fragment.wait.NetizenConsultFragment;
+import dingw.com.newversion.fragment.wait.NewLawExpressFragment;
 import dingw.com.newversion.fragment.wait.NewsFragment;
+import dingw.com.newversion.fragment.wait.NoticeFragment;
 import dingw.com.newversion.fragment.wait.YiPiBanFragment;
 
 /**
@@ -147,10 +152,10 @@ public class FragmentFactory {
 //            case 29://平台--法律计算器--土地证书编号查询
 //                createCalculatorFrag("http://www.rerc.com.cn/ts01.htm");
 //                break;
-//            case 30://工作--本所公告--
-////                fragment=new FragmentNotice();
-//                createNoticeFrag("http://ceshi.12348oa.com/flfw/bulletin/getList?page=",1);
-//                break;
+            case 30://工作--本所公告--
+//                fragment=new FragmentNotice();
+                createNoticeFrag("http://ceshi.12348oa.com/flfw/bulletin/getList?page=",1);
+                break;
 //            case 31://工作--会议记录
 //                createNoticeFrag("http://ceshi.12348oa.com/flfw/minute/getList?page=",2);
 //                break;
@@ -160,15 +165,15 @@ public class FragmentFactory {
             case 33://待办--案件--a非诉讼案件--已批办
                 fragment=new FeiYIPiBanFragment();
                 break;
-//            case 34://待办--顾问--未完成工单
-//                fragment=new FragmentConsultantUNdone();
-//                break;
-//            case 35://待办--网民咨询
-//                fragment=new FragmentNetizenConsult();
-//                break;
-//            case 36://待办 --新法速递
-//                fragment=new FragmentNewLawExpress();
-//                break;
+            case 34://待办--顾问--未完成工单
+                fragment=new ConsultantUNdoneFragment();
+                break;
+            case 35://待办--网民咨询
+                fragment=new NetizenConsultFragment();
+                break;
+            case 36://待办 --新法速递
+                fragment=new NewLawExpressFragment();
+                break;
 //            case 37://主页--工作--诉讼案件
 //                fragment=new FragmentLawsuit();
 //                break;
@@ -264,14 +269,14 @@ public class FragmentFactory {
 //        bundle.putInt("type",type);
 //        fragment.setArguments(bundle);
 //    }
-//    /**创建本所公告fragment*/
-//    private void createNoticeFrag(String url,int type) {
-//        fragment=new FragmentNotice();
-//        Bundle bundle=new Bundle();
-//        bundle.putString("url",url);
-//        bundle.putInt("type",type);
-//        fragment.setArguments(bundle);
-//    }
+    /**创建本所公告fragment*/
+    private void createNoticeFrag(String url,int type) {
+        fragment=new NoticeFragment();
+        Bundle bundle=new Bundle();
+        bundle.putString("url",url);
+        bundle.putInt("type",type);
+        fragment.setArguments(bundle);
+    }
 //    /**创建计算器fragment*/
 //    private void createCalculatorFrag(String url) {
 //        fragment=new FragmentCalculator();

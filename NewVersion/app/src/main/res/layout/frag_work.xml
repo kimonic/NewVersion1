@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white1"
+    android:orientation="vertical">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:descendantFocusability="blocksDescendants"
+        android:orientation="vertical">
+        <android.support.v7.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="5dp"
+            app:cardElevation="5dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginTop="20dp"
+
+            >
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:textSize="50sp"
+                    android:layout_marginTop="20dp"
+                    android:id="@+id/textview_fragwork_time"
+                    />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:layout_marginLeft="50dp"
+                    android:layout_marginRight="50dp"
+                    android:id="@+id/textview_fragwork_timedetail"
+                    android:layout_marginBottom="30dp"
+                    android:background="@drawable/xshape_rdbac1"/>
+            </LinearLayout>
+
+        </android.support.v7.widget.CardView>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:paddingLeft="10dp"
+            android:paddingStart="10dp"
+            android:paddingRight="0dp"
+            android:paddingEnd="0dp"
+            android:textSize="18sp"
+            android:background="@color/gray"
+            android:textStyle="bold"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp"
+            android:text="@string/normaoevent"/>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="20dp"
+            android:background="@color/white1">
+
+            <dingw.com.newversion.customview.IAVview
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                app:image_background="@drawable/work_dzgl"
+                app:text_text="@string/accountmanager"
+                android:id="@+id/imageaddtext_fragwork1"
+                app:text_color="@color/mytextcolorblack"
+                />
+            <dingw.com.newversion.customview.IAVview
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                app:image_background="@drawable/work_bsgg"
+                app:text_text="@string/notice"
+                android:id="@+id/imageaddtext_fragwork2"
+                app:text_color="@color/mytextcolorblack"
+                android:layout_weight="1"
+                />
+            <dingw.com.newversion.customview.IAVview
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                app:image_background="@drawable/work_ssaj"
+                app:text_text="@string/case3"
+                android:id="@+id/imageaddtext_fragwork3"
+                app:text_color="@color/mytextcolorblack"
+                android:layout_weight="1"
+                />
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_marginTop="25dp"
+            android:layout_marginBottom="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp"
+            android:background="@color/gray"
+            android:textStyle="bold"
+            android:paddingLeft="10dp"
+            android:paddingStart="10dp"
+            android:paddingRight="0dp"
+            android:paddingEnd="0dp"
+            android:text="@string/otherevent"
+            android:textSize="18sp"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white1"
+            android:paddingTop="10dp"
+
+            >
+            <GridView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/gridview_fragmentwork"
+                android:columnWidth="90dp"
+                android:numColumns="3"
+                android:verticalSpacing="20dp"
+                android:gravity="center"
+                android:stretchMode="columnWidth"
+                >
+            </GridView>
+        </LinearLayout>
+    </LinearLayout>
+
+
+
+
+</ScrollView>

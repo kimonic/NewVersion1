@@ -12,8 +12,8 @@ import okhttp3.OkHttpClient;
  * okhttpclient singleton
  */
 
-public class MyOkHttpSingleton {
-    public static MyOkHttpSingleton instance;
+class MyOkHttpSingleton {
+    private static MyOkHttpSingleton instance;
     private OkHttpClient okHttpClient;
     private Context context;
 
@@ -30,7 +30,7 @@ public class MyOkHttpSingleton {
     }
 
 
-    public OkHttpClient getOkHttpClient() {
+    OkHttpClient getOkHttpClient() {
         if (okHttpClient==null){
             okHttpClient=new OkHttpClient.Builder()
                     .cache(new Cache(context.getApplicationContext().getCacheDir(), 20*1024*1024))

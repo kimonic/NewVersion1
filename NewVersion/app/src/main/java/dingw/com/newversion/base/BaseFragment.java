@@ -54,7 +54,9 @@ public abstract class BaseFragment extends Fragment implements BaseFunc,View.OnC
 
     @Override
     public void initContentView() {
-        view=inflater.inflate(resId,container,false);
+        if (resId!=0){
+            view=inflater.inflate(resId,container,false);
+        }
         if (getView()!=null){
             unbinder = ButterKnife.bind(this, getView());
         }

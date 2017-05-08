@@ -49,4 +49,13 @@
             <enum name="rightBottom" value="9"/>
         </attr>
     </declare-styleable>
+    <declare-styleable name="ImageAddText">
+        <attr name="image_width" format="dimension"/>
+        <attr name="image_height" format="dimension"/>
+        <attr name="image_background" format="reference|color"/>
+        <attr name="text_text" format="string"/>
+        <attr name="text_size" format="dimension"/>
+        <attr name="text_color" format="color"/>
+
+    </declare-styleable>
 </resources>

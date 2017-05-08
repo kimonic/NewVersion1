@@ -350,6 +350,22 @@
     <string name="wangmintuisong">网民委托推送</string>
     <string name="goumaituisong">法律服务购买推送</string>
     <string name="benjiweianzhuang">本机未安装QQ应用!</string>
+    <string name="jiazaichucuo">加载数据出错,请检查网络连接!</string>
+    <string name="meiyougenguo">没有更多内容啦!</string>
+    <string name="jsonerror">json数据解析出错!</string>
+    <string name="pinglunneirongbu">评论内容不能少于5个字!</string>
+    <string name="shoucangchenggong">收藏成功!</string>
+    <string name="quuxiaoshoucang">取消收藏!</string>
+    <string name="daitaolunwenjian">待讨论文件</string>
+    <string name="guwengongdan">顾问工单</string>
+    <string name="wodecaiwu">我的财务</string>
+    <string name="tixianguali">提现管理</string>
+    <string name="yajinguanli">押金管理</string>
+    <string name="qitafeiyong">其他费用</string>
+    <string name="huiyijilu">会议记录</string>
+    <string name="guwenqianyue">顾问签约</string>
+    <string name="tianjiacaiwu">添加财务</string>
+    <string name="bukaifapiaoguanli">补开发票管理</string>
 
 
 </resources>

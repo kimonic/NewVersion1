@@ -2,6 +2,7 @@ package dingw.com.newversion.utils;
 
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.GridView;
 import android.widget.ListAdapter;
 import android.widget.ListView;
 
@@ -24,5 +25,29 @@ public class HeightUtils {
             params.height = totalHeight + (listView.getDividerHeight() * (adapter.getCount() - 1));
             listView.setLayoutParams(params);
         }
+    }
+
+    /**为gridview设置固定的高度*/
+    public static void setListViewHeight(GridView gridView,int gridviewColumns) {
+        ListAdapter adapter=gridView.getAdapter();
+        if (adapter!=null){
+            int totalHeight=0;
+            int count;
+            if (adapter.getCount()%gridviewColumns==0){//------------------------
+                count=adapter.getCount()/gridviewColumns;
+            }else {
+                count=adapter.getCount()/gridviewColumns+1;
+            }
+            for (int i = 0; i < count; i++) {
+                View listitem=adapter.getView(i,null,gridView);
+                listitem.measure(0,0);
+                totalHeight+=listitem.getMeasuredHeight();
+            }
+            ViewGroup.LayoutParams params=gridView.getLayoutParams();
+            params.height=totalHeight+gridView.getVerticalSpacing()*(count+1);
+            gridView.setLayoutParams(params);
+
+        }
+
     }
 }

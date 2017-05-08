@@ -22,6 +22,7 @@ import dingw.com.newversion.R;
 import dingw.com.newversion.base.BaseActivity;
 import dingw.com.newversion.customview.TopBar;
 import dingw.com.newversion.fragment.wait.WaitFragment;
+import dingw.com.newversion.fragment.work.WorkFragment;
 
 /**
  * Created by 12348 on 2017/5/3 0003.
@@ -83,7 +84,7 @@ public class HomeActivity extends BaseActivity {
     /**
      * 工作fragment
      */
-//    private WorkFragment fragment_work;
+    private WorkFragment fragment_work;
     /**
      * 待办fragment
      */
@@ -334,12 +335,12 @@ public class HomeActivity extends BaseActivity {
                 currentLinear = v.getId();
                 flHome.setVisibility(View.GONE);
 
-//                if (fragment_work == null) {
-//                    fragment_work = new Fragment_Work();
-//                    fragmentTransaction.add(R.id.fragment_container, fragment_work);
-//                } else {
-//                    fragmentTransaction.show(fragment_work);
-//                }
+                if (fragment_work == null) {
+                    fragment_work = new WorkFragment();
+                    fragmentTransaction.add(R.id.fragment_container, fragment_work);
+                } else {
+                    fragmentTransaction.show(fragment_work);
+                }
 
                 break;
             case R.id.linearlayout_community://社区点击事件
@@ -410,9 +411,9 @@ public class HomeActivity extends BaseActivity {
         if (fragment_wait != null) {
             fragmentTransaction.hide(fragment_wait);
         }
-//        if (fragment_work != null) {
-//            fragmentTransaction.hide(fragment_work);
-//        }
+        if (fragment_work != null) {
+            fragmentTransaction.hide(fragment_work);
+        }
 //        if (fragment_plateform != null) {
 //            fragmentTransaction.hide(fragment_plateform);
 //        }
