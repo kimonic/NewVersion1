@@ -63,6 +63,6 @@ public class FeiYIPiBanFragment extends RefreshBaseFragment {
 
     @Override
     public void initLoad() {
-
+        showXlistview();
     }
 }

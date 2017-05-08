@@ -1,5 +1,6 @@
 package dingw.com.newversion.fragment.wait;
 
+import android.support.v7.view.menu.ShowableListMenu;
 import android.view.View;
 import android.widget.BaseAdapter;
 
@@ -63,6 +64,6 @@ public class YiPiBanFragment extends RefreshBaseFragment {
 
     @Override
     public void initLoad() {
-
+        showXlistview();
     }
 }

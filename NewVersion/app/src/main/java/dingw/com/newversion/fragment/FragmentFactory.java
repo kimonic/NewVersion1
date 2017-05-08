@@ -15,6 +15,10 @@ import dingw.com.newversion.fragment.wait.NewLawExpressFragment;
 import dingw.com.newversion.fragment.wait.NewsFragment;
 import dingw.com.newversion.fragment.wait.NoticeFragment;
 import dingw.com.newversion.fragment.wait.YiPiBanFragment;
+import dingw.com.newversion.fragment.work.LawsuitFragment;
+import dingw.com.newversion.fragment.work.NoLawsuitFragment;
+import dingw.com.newversion.fragment.work.NoPiBanFragment;
+import dingw.com.newversion.fragment.work.PiBanFragment;
 
 /**
  * Created by 12348 on 2017/5/3 0003.
@@ -174,18 +178,18 @@ public class FragmentFactory {
             case 36://待办 --新法速递
                 fragment=new NewLawExpressFragment();
                 break;
-//            case 37://主页--工作--诉讼案件
-//                fragment=new FragmentLawsuit();
-//                break;
-//            case 38://主页--工作--非诉讼案件
-//                fragment=new FragmentNoLawsuit();
-//                break;
-//            case 39://主页--工作--我要批办
-//                fragment=new FragmentPiBan();
-//                break;
-//            case 40://主页--工作--我要批办--非诉讼批办--已批办
-//                fragment=new FragmentNoPiBan();
-//                break;
+            case 37://主页--工作--诉讼案件
+                fragment=new LawsuitFragment();
+                break;
+            case 38://主页--工作--非诉讼案件
+                fragment=new NoLawsuitFragment();
+                break;
+            case 39://主页--工作--我要批办
+                fragment=new PiBanFragment();
+                break;
+            case 40://主页--工作--我要批办--非诉讼批办--已批办
+                fragment=new NoPiBanFragment();
+                break;
 //            case 41://主页--工作--顾问单位
 //                fragment=new FragmentConsultantUnit();
 //                break;

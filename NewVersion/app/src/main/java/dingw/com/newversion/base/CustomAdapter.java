@@ -12,7 +12,12 @@ import java.util.List;
 
 public abstract class CustomAdapter extends BaseAdapter {
     public Context context;
-    protected List<BaseBean> list;
+
+    public void setList(List<BaseBean> list) {
+        this.list = list;
+    }
+
+    public List<BaseBean> list;
 
     public CustomAdapter(Context context, List<BaseBean> list) {
         this.context = context;

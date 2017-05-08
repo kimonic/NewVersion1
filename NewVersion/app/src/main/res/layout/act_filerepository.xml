@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/huise1"
+    android:orientation="vertical">
+
+    <dingw.com.newversion.customview.TopBar
+        android:id="@+id/topbar_filerepositoryact"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        custom:centerText="@string/localfile">
+
+    </dingw.com.newversion.customview.TopBar>
+
+    <LinearLayout
+        android:id="@+id/linearlayout_filerepository_search"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="5dp"
+        android:background="@drawable/xshape_searchbac"
+        android:gravity="center"
+        android:paddingBottom="5dp"
+
+        android:paddingTop="5dp">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="@null"
+            android:src="@android:drawable/ic_menu_search" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/search" />
+
+    </LinearLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <dingw.com.newversion.widget.XListView
+            android:id="@+id/listview_filerepository"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white1"
+            android:visibility="gone"
+            >
+
+        </dingw.com.newversion.widget.XListView>
+
+        <ProgressBar
+            android:id="@+id/progressbar_filerepository"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:indeterminateDrawable="@drawable/xanim_progressbar"
+
+            />
+
+    </FrameLayout>
+
+
+</LinearLayout>

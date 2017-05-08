@@ -141,6 +141,10 @@ public class TopBar extends LinearLayout implements View.OnClickListener {
     public void setTvText(String content){
         tvText.setText(content);
     }
+    /**获得中间文本内容*/
+    public String getTvText(){
+        return tvText.getText().toString();
+    }
     /**设置中间文本*/
     public void setTvText(int resId){
         tvText.setText(resId);

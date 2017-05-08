@@ -42,7 +42,6 @@ public abstract class RefreshBaseFragment extends BaseFragment implements XListV
         xlvFragcommon.setRefreshTime(getTime());//加载时间
         xlvFragcommon.setAdapter(setAdapter());//设置适配器
 
-
         //-----------------------------------------------------
         showProgressbar();
     }

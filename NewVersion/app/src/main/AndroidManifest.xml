@@ -93,6 +93,9 @@
         <activity android:name=".activity.wait.NewLawExpressActivity"/>
         <activity android:name=".activity.wait.NetizenConsultDeActivity"/>
 
+        <activity android:name=".activity.work.WorkTwoActivity"/>
+        <activity android:name=".activity.work.FileRepositoryActivity"/>
+
     </application>
 
 </manifest>
