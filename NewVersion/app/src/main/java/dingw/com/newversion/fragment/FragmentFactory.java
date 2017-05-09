@@ -15,10 +15,15 @@ import dingw.com.newversion.fragment.wait.NewLawExpressFragment;
 import dingw.com.newversion.fragment.wait.NewsFragment;
 import dingw.com.newversion.fragment.wait.NoticeFragment;
 import dingw.com.newversion.fragment.wait.YiPiBanFragment;
+import dingw.com.newversion.fragment.work.ConsultantUnitFragment;
+import dingw.com.newversion.fragment.work.DepositFragment;
 import dingw.com.newversion.fragment.work.LawsuitFragment;
+import dingw.com.newversion.fragment.work.MyFinancingFragment;
 import dingw.com.newversion.fragment.work.NoLawsuitFragment;
 import dingw.com.newversion.fragment.work.NoPiBanFragment;
+import dingw.com.newversion.fragment.work.OtherCostFragmnet;
 import dingw.com.newversion.fragment.work.PiBanFragment;
+import dingw.com.newversion.fragment.work.WithdrawsFragment;
 
 /**
  * Created by 12348 on 2017/5/3 0003.
@@ -160,9 +165,9 @@ public class FragmentFactory {
 //                fragment=new FragmentNotice();
                 createNoticeFrag("http://ceshi.12348oa.com/flfw/bulletin/getList?page=",1);
                 break;
-//            case 31://工作--会议记录
-//                createNoticeFrag("http://ceshi.12348oa.com/flfw/minute/getList?page=",2);
-//                break;
+            case 31://工作--会议记录
+                createNoticeFrag("http://ceshi.12348oa.com/flfw/minute/getList?page=",2);
+                break;
             case 32://待办--案件--诉讼案件--已批办
                 fragment= new YiPiBanFragment();
                 break;
@@ -190,37 +195,37 @@ public class FragmentFactory {
             case 40://主页--工作--我要批办--非诉讼批办--已批办
                 fragment=new NoPiBanFragment();
                 break;
-//            case 41://主页--工作--顾问单位
-//                fragment=new FragmentConsultantUnit();
-//                break;
-//            case 42://主页--工作--我的财务
-//                fragment=new FragmentMyFinancing();
-//                break;
-//            case 43://工作--提现管理--审核中
-//                fragment=new FragmentWithdraws();
-//                break;
-//            case 44://工作--提现管理--已提取
-//                fragment=new FragmentWithdraws();
-//                Bundle bundle=new Bundle();
-//                bundle.putInt("type",2);
-//                fragment.setArguments(bundle);
-//                break;
-//            case 45://工作--押金管理--审核中
-//                createDepositFragment(1);
-//                break;
-//            case 46://工作--押金管理--已审核
-//                createDepositFragment(2);
-//                break;
-//            case 47://工作--押金管理--已提取
-//                createDepositFragment(3);
-//                break;
-//            case 48://工作--其他费用
-//                fragment=new FragmnetOtherCost();
-//                break;
-//            case 49://平台--网民委托--已联系--委托详情
+            case 41://主页--工作--顾问单位
+                fragment=new ConsultantUnitFragment();
+                break;
+            case 42://主页--工作--我的财务
+                fragment=new MyFinancingFragment();
+                break;
+            case 43://工作--提现管理--审核中
+                fragment=new WithdrawsFragment();
+                break;
+            case 44://工作--提现管理--已提取
+                fragment=new WithdrawsFragment();
+                Bundle bundle=new Bundle();
+                bundle.putInt("type",2);
+                fragment.setArguments(bundle);
+                break;
+            case 45://工作--押金管理--审核中
+                createDepositFragment(1);
+                break;
+            case 46://工作--押金管理--已审核
+                createDepositFragment(2);
+                break;
+            case 47://工作--押金管理--已提取
+                createDepositFragment(3);
+                break;
+            case 48://工作--其他费用
+                fragment=new OtherCostFragmnet();
+                break;
+//            case 49://主页--平台--网民委托--已联系--委托详情
 //                createNetizenEntrustFragment(1);
 //                break;
-//            case  50://平台--网民委托--已完成--委托详情
+//            case  50://主页--平台--网民委托--已完成--委托详情
 //                createNetizenEntrustFragment(2);
 //                break;
 //            case 51://主页--平台--委托订单fragment
@@ -266,13 +271,13 @@ public class FragmentFactory {
 //        fragment.setArguments(bundle);
 //
 //    }
-//    /**创建押金管理fragment*/
-//    private void createDepositFragment(int type) {
-//        fragment=new FragmentDeposit();
-//        Bundle bundle=new Bundle();
-//        bundle.putInt("type",type);
-//        fragment.setArguments(bundle);
-//    }
+    /**创建押金管理fragment*/
+    private void createDepositFragment(int type) {
+        fragment=new DepositFragment();
+        Bundle bundle=new Bundle();
+        bundle.putInt("type",type);
+        fragment.setArguments(bundle);
+    }
     /**创建本所公告fragment*/
     private void createNoticeFrag(String url,int type) {
         fragment=new NoticeFragment();

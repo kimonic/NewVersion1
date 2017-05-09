@@ -366,6 +366,8 @@
     <string name="guwenqianyue">顾问签约</string>
     <string name="tianjiacaiwu">添加财务</string>
     <string name="bukaifapiaoguanli">补开发票管理</string>
+    <string name="meiyoufaxian">没有发现QQ</string>
+    <string name="boda">拨打</string>
 
 
 </resources>

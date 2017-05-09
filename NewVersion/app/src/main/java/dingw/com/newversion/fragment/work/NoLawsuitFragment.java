@@ -60,6 +60,6 @@ public class NoLawsuitFragment extends RefreshBaseFragment {
 
     @Override
     public void initLoad() {
-
+        showXlistview();
     }
 }

@@ -20,6 +20,7 @@ import dingw.com.newversion.R;
 import dingw.com.newversion.adapter.wait.Viewpager_Adapter;
 import dingw.com.newversion.base.BaseActivity;
 import dingw.com.newversion.fragment.FragmentFactory;
+import dingw.com.newversion.fragment.work.MyFinancingFragment;
 import dingw.com.newversion.utils.ScreenUtils;
 
 /**
@@ -195,12 +196,12 @@ public class CommonActivity extends BaseActivity {
         FragmentFactory fragmentCollection = new FragmentFactory(fragmentType);
         fragmentList = fragmentCollection.getFragmentList();
 
-//        if (fragmentList.get(0) instanceof FragmentMyFinancing) {//当加载我的财务fragment时传递数据
-//            for (int i = 0; i < fragmentList.size(); i++) {
-//                String temp = "(" + labelList.get(i) + ")单位:元";
-//                ((FragmentMyFinancing) (fragmentList.get(i))).setTop(temp);
-//            }
-//        }
+        if (fragmentList.get(0) instanceof MyFinancingFragment) {//当加载我的财务fragment时传递数据
+            for (int i = 0; i < fragmentList.size(); i++) {
+                String temp = "(" + labelList.get(i) + ")单位:元";
+                ((MyFinancingFragment) (fragmentList.get(i))).setTop(temp);
+            }
+        }
 
     }
     /**

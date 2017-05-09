@@ -1,5 +1,7 @@
 package dingw.com.newversion.bean;
 
+import com.google.gson.annotations.SerializedName;
+
 import dingw.com.newversion.base.BaseBean;
 
 /**
@@ -15,6 +17,16 @@ public class LoginBean extends BaseBean{
     private String office_type;
     private String session_id;
 
+    public String[] getTemp() {
+        return temp;
+    }
+
+    public void setTemp(String[] temp) {
+        this.temp = temp;
+    }
+
+    private String[] temp;
+
     private String list;
     private String zero;
     private String one;
@@ -22,6 +34,7 @@ public class LoginBean extends BaseBean{
     private String one_office_id;
     private String zero_office_name;
     private String zero_office_id;
+    @SerializedName(value = "error",alternate ={"Error","Error123"})//设置别名
     private String error;
 
     public String getError() {

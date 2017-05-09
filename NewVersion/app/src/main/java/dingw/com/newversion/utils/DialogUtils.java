@@ -25,6 +25,17 @@ public class DialogUtils {
                     }
                 }).show();
     }
+    public static void showDialog(final Activity activity,String message,int positiveText,DialogInterface.OnClickListener listener){
+        AlertDialog.Builder dialog = new AlertDialog.Builder(activity);
+        dialog.setMessage(message)
+                .setPositiveButton(positiveText,listener)
+                .setNegativeButton(R.string.cancel1, new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        dialog.dismiss();
+                    }
+                }).show();
+    }
     public static void showDialog(final Activity activity,int message,int positiveText,int  title,DialogInterface.OnClickListener listener){
         AlertDialog.Builder dialog = new AlertDialog.Builder(activity);
         dialog.setMessage(message)

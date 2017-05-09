@@ -192,44 +192,44 @@ public class WorkFragment extends BaseFragment implements Runnable{
                         intent2.putExtra("title","本所文件库");
                         startActivity(intent2);
                         break;
-//                    case 3://工作--待讨论文件
-//                        //-------------------url需更改-----------------------------------
-//                        Intent intent3=new Intent(getActivity(), FileRepositoryActivity.class);
-//                        intent3.putExtra("title","待讨论文件");
-//                        startActivity(intent3);
-////                        startMyActivity("待讨论文件",0,WorkTwoActivity.class,new int[]{30},Constant.NOTICE_SEARCH_URL,1);
-//                        break;
-//                    case 4:///工作--顾问单位
-//                        //-------------------url需更改-----------------------------------
-//                        startMyActivity("顾问单位",0,WorkTwoActivity.class,new int[]{41},Constant.NOTICE_SEARCH_URL,1);
-//                        break;
-//                    case 5://工作--顾问工单
-//                        StartCommonActivity.startAct(getActivity(),new String[]{"未受理","受理中","已完成"},new int[]{0,34,34},"顾问工单",false,"");
-//                        break;
-//                    case 6://工作--我的财务
-//                        StartCommonActivity.startAct(getActivity(),new String[]{"2015","2016","2017"},new int[]{42,42,42},"我的财务",false,"");
-//                        break;
-//                    case 7://工作--提现管理
-//                        StartCommonActivity.startAct(getActivity(),new String[]{"审核中","已审核","已提取"},new int[]{43,0,44},"提现管理",false,"");
-//                        break;
-//                    case 8://工作--押金管理
-//                        StartCommonActivity.startAct(getActivity(),new String[]{"审核中","已审核","已提取"},new int[]{45,46,47},"押金管理",false,"");
-//                        break;
-//                    case 9://工作--其他费用
-//                        StartCommonActivity.startAct(getActivity(),new String[]{""},new int[]{48},"其他费用",false,"");
-//                        break;
-//                    case 10:
-//                        startMyActivity("会议记录",0,WorkTwoActivity.class,new int[]{31},Constant.MINUTE_SEARCH_URL,2);
-//                        break;
-//                    case 11:
-//                        StartCommonActivity.startAct(getActivity(),new String[]{""},new int[]{0},"顾问签约",false,"");
-//                        break;
-//                    case 12:
-//                        StartCommonActivity.startAct(getActivity(),new String[]{""},new int[]{0},"添加财务",false,"");
-//                        break;
-//                    case 13:
-//                        StartCommonActivity.startAct(getActivity(),new String[]{""},new int[]{0},"补开发票管理",false,"");
-//                        break;
+                    case 3://工作--待讨论文件
+                        //-------------------url需更改-----------------------------------
+                        Intent intent3=new Intent(getActivity(), FileRepositoryActivity.class);
+                        intent3.putExtra("title","待讨论文件");
+                        startActivity(intent3);
+//                        startMyActivity("待讨论文件",0,WorkTwoActivity.class,new int[]{30},Constant.NOTICE_SEARCH_URL,1);
+                        break;
+                    case 4:///工作--顾问单位
+                        //-------------------url需更改-----------------------------------
+                        startMyActivity("顾问单位",0,WorkTwoActivity.class,new int[]{41},Constant.NOTICE_SEARCH_URL,1);
+                        break;
+                    case 5://工作--顾问工单
+                        StartCommonActivity.startAct(getActivity(),new String[]{"未受理","受理中","已完成"},new int[]{0,34,34},"顾问工单",false,"");
+                        break;
+                    case 6://工作--我的财务
+                        StartCommonActivity.startAct(getActivity(),new String[]{"2015","2016","2017"},new int[]{42,42,42},"我的财务",false,"");
+                        break;
+                    case 7://工作--提现管理
+                        StartCommonActivity.startAct(getActivity(),new String[]{"审核中","已审核","已提取"},new int[]{43,0,44},"提现管理",false,"");
+                        break;
+                    case 8://工作--押金管理
+                        StartCommonActivity.startAct(getActivity(),new String[]{"审核中","已审核","已提取"},new int[]{45,46,47},"押金管理",false,"");
+                        break;
+                    case 9://工作--其他费用
+                        StartCommonActivity.startAct(getActivity(),new String[]{""},new int[]{48},"其他费用",false,"");
+                        break;
+                    case 10:
+                        startMyActivity("会议记录",0,WorkTwoActivity.class,new int[]{31},Constant.MINUTE_SEARCH_URL,2);
+                        break;
+                    case 11:
+                        StartCommonActivity.startAct(getActivity(),new String[]{""},new int[]{0},"顾问签约",false,"");
+                        break;
+                    case 12:
+                        StartCommonActivity.startAct(getActivity(),new String[]{""},new int[]{0},"添加财务",false,"");
+                        break;
+                    case 13:
+                        StartCommonActivity.startAct(getActivity(),new String[]{""},new int[]{0},"补开发票管理",false,"");
+                        break;
                 }
             }
         });
