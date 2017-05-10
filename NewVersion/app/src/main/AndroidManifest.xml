@@ -95,6 +95,7 @@
 
         <activity android:name=".activity.work.WorkTwoActivity"/>
         <activity android:name=".activity.work.FileRepositoryActivity"/>
+        <activity android:name=".activity.work.NoticeDeActivity"/>
 
     </application>
 

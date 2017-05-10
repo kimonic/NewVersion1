@@ -58,4 +58,14 @@
         <attr name="text_color" format="color"/>
 
     </declare-styleable>
+    <declare-styleable name="ImageAddText_Horizontal">
+        <attr name="it_width" format="dimension"/>
+        <attr name="it_height" format="dimension"/>
+        <attr name="it_background" format="reference|color"/>
+        <attr name="it_text" format="string"/>
+        <attr name="it_textsize" format="dimension"/>
+        <attr name="it_textcolor" format="color"/>
+    </declare-styleable>
+
+
 </resources>

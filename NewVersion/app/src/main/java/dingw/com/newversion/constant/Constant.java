@@ -30,6 +30,8 @@ public class Constant {
     public static final String FINANCE=NEWBASEURL+"finance_personal/total";
     /**主页--待办--网民咨询*/
     public static final String WANGMINZIXUN=NEWBASEURL+"consult/getList";
+    /**主页--工作--本所公告--详情*/
+    public static final String BENSUOGONGGAO_DEETAILS=NEWBASEURL+"bulletin/getDetails?id=";
 
 
 

@@ -6,6 +6,7 @@ import android.content.res.TypedArray;
 import android.graphics.drawable.Drawable;
 import android.support.annotation.Nullable;
 import android.util.AttributeSet;
+import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.ImageView;
@@ -22,6 +23,8 @@ import dingw.com.newversion.R;
 
 public class IAVview extends LinearLayout {
     private Context context;
+    private float image_width;
+    private float image_height;
 
     public IAVview(Context context) {
         this(context, null, 0);
@@ -56,7 +59,17 @@ public class IAVview extends LinearLayout {
         Drawable image_background = ta.getDrawable(R.styleable.ImageAddText_image_background);
         String text_text = ta.getString(R.styleable.ImageAddText_text_text);
         int text_color = ta.getColor(R.styleable.ImageAddText_text_color, 0);
+        image_width=ta.getDimension(R.styleable.ImageAddText_image_width,0);
+        image_height=ta.getDimension(R.styleable.ImageAddText_image_height,0);
         ta.recycle();
+
+        if (image_width!=0&&image_height!=0){
+            LayoutParams layoutParams=new LayoutParams((int) image_width,(int) image_height);
+            layoutParams.gravity= Gravity.CENTER;
+            layoutParams.setMargins(0,0,0,50);//
+            imageView.setLayoutParams(layoutParams);
+        }
+
 
         imageView.setImageDrawable(image_background);
         textView.setTextColor(text_color);

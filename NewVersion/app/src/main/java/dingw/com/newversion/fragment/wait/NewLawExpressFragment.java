@@ -25,7 +25,7 @@ public class NewLawExpressFragment extends RefreshBaseFragment {
     }
 
     @Override
-    public void setItemClick() {
+    public void setItemClick(int position) {
         openActivity(NewLawExpressActivity.class);
     }
 

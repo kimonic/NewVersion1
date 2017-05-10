@@ -141,6 +141,11 @@ public class MyItemActivity extends BaseActivity {
     }
 
     @Override
+    public void initLoad() {
+
+    }
+
+    @Override
     public void onClick(View v) {
 
     }

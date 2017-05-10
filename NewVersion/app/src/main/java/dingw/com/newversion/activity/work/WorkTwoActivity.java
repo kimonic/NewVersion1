@@ -96,6 +96,11 @@ public class WorkTwoActivity extends BaseActivity {
     }
 
     @Override
+    public void initLoad() {
+
+    }
+
+    @Override
     public void onClick(View v) {
         switch (v.getId()){
             case R.id.linearlayout_worktwo:

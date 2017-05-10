@@ -21,6 +21,7 @@ import dingw.com.newversion.developkit.AutoBindUnbind;
 import dingw.com.newversion.R;
 import dingw.com.newversion.base.BaseActivity;
 import dingw.com.newversion.customview.TopBar;
+import dingw.com.newversion.fragment.platform.PlateformFragment;
 import dingw.com.newversion.fragment.wait.WaitFragment;
 import dingw.com.newversion.fragment.work.WorkFragment;
 
@@ -89,10 +90,10 @@ public class HomeActivity extends BaseActivity {
      * 待办fragment
      */
     private WaitFragment fragment_wait;
-//    /**
-//     * 平台fragment
-//     */
-//    private Fragment_Plateform fragment_plateform;
+    /**
+     * 平台fragment
+     */
+    private PlateformFragment fragment_plateform;
 //    /**
 //     * 律师自媒体fragment
 //     */
@@ -145,6 +146,11 @@ public class HomeActivity extends BaseActivity {
         llComplate.setOnClickListener(this);
         initSpiner();
         ivHomeadd.setOnClickListener(this);
+    }
+
+    @Override
+    public void initLoad() {
+
     }
 
     /**
@@ -357,12 +363,12 @@ public class HomeActivity extends BaseActivity {
                 flHome.setVisibility(View.GONE);
 
 
-//                if (fragment_plateform == null) {
-//                    fragment_plateform = new Fragment_Plateform();
-//                    fragmentTransaction.add(R.id.fragment_container, fragment_plateform);
-//                } else {
-//                    fragmentTransaction.show(fragment_plateform);
-//                }
+                if (fragment_plateform == null) {
+                    fragment_plateform = new PlateformFragment();
+                    fragmentTransaction.add(R.id.fragment_container, fragment_plateform);
+                } else {
+                    fragmentTransaction.show(fragment_plateform);
+                }
                 break;
         }
     }
@@ -414,9 +420,9 @@ public class HomeActivity extends BaseActivity {
         if (fragment_work != null) {
             fragmentTransaction.hide(fragment_work);
         }
-//        if (fragment_plateform != null) {
-//            fragmentTransaction.hide(fragment_plateform);
-//        }
+        if (fragment_plateform != null) {
+            fragmentTransaction.hide(fragment_plateform);
+        }
 //        if (fragment_community != null) {
 //            fragmentTransaction.hide(fragment_community);
 //        }

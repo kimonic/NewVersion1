@@ -42,9 +42,7 @@ public abstract class BaseActivity extends AppCompatActivity implements View.OnC
     /**初始化事件监听方法*/
     public abstract void initListener();
     /**初始化界面加载方法*/
-    public  void initLoad(){
-
-    }
+    public  abstract void initLoad();
 
     /**启动下一个activity*/
     protected void openActivity(Class<? extends BaseActivity> toActivity) {

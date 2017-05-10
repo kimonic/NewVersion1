@@ -53,6 +53,11 @@ public class NetizenConsultDeActivity extends BaseActivity {
     }
 
     @Override
+    public void initLoad() {
+
+    }
+
+    @Override
     public void onClick(View v) {
         switch (v.getId()){
             case R.id.textview_netizendetailsactfinish://结束activity

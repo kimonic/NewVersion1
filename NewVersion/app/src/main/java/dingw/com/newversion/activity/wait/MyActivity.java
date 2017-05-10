@@ -150,6 +150,12 @@ public class MyActivity extends BaseActivity {
         });
         setListviewListener();
     }
+
+    @Override
+    public void initLoad() {
+
+    }
+
     private void setListviewListener() {
         lvMy.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override

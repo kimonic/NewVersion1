@@ -54,7 +54,7 @@ public class NetizenConsultFragment extends RefreshBaseFragment {
     }
 
     @Override
-    public void setItemClick() {
+    public void setItemClick(int position) {
         openActivity(NetizenConsultDeActivity.class);
     }
 

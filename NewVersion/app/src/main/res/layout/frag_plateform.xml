@@ -1,0 +1,323 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    >
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/huise"
+        android:orientation="vertical">
+        <dingw.com.newversion.customview.MyBanner
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:id="@+id/mybanner_activity"
+            app:resid_dotsarray="@array/dotsarray"
+            app:resid_imagearray="@array/imagearray"
+            app:duration="3000"
+            app:autoslide="true"
+            app:dotsleft="15"
+            >
+
+        </dingw.com.newversion.customview.MyBanner>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="2dp"
+            android:orientation="horizontal">
+
+            <dingw.com.newversion.customview.IAVview_Horizontal
+                android:id="@+id/imageaddtext_fragplateform1"
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:layout_weight="1"
+                android:background="@color/white1"
+                custom:it_text="@string/netizenentrust"
+                custom:it_background="@drawable/platform_weituo"
+                android:layout_marginRight="2dp"
+                android:layout_marginEnd="2dp"
+                >
+
+            </dingw.com.newversion.customview.IAVview_Horizontal>
+
+            <dingw.com.newversion.customview.IAVview_Horizontal
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:id="@+id/imageaddtext_fragplateform2"
+                android:layout_weight="1"
+                android:background="@color/white1"
+                custom:it_text="@string/entrustindent"
+                custom:it_background="@drawable/platform_dingdan"
+                >
+
+            </dingw.com.newversion.customview.IAVview_Horizontal>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <dingw.com.newversion.customview.IAVview_Horizontal
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:id="@+id/imageaddtext_fragplateform3"
+                android:layout_weight="1"
+                android:background="@color/white1"
+                custom:it_text="@string/lawindent"
+                custom:it_background="@drawable/platform_service"
+                android:layout_marginRight="2dp"
+                android:layout_marginEnd="2dp" >
+
+            </dingw.com.newversion.customview.IAVview_Horizontal>
+            <dingw.com.newversion.customview.IAVview_Horizontal
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:id="@+id/imageaddtext_fragplateform4"
+                android:layout_weight="1"
+                android:background="@color/white1"
+                custom:it_text="@string/lawcall"
+                custom:it_background="@drawable/platform_zhaotoubiao"
+                >
+
+            </dingw.com.newversion.customview.IAVview_Horizontal>
+
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+
+
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:background="@color/white1"
+                android:layout_weight="0.5"
+                >
+                <dingw.com.newversion.customview.IAVview
+                    android:layout_width="match_parent"
+                    android:background="@color/white1"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    custom:image_width="50dp"
+                    custom:image_height="50dp"
+                    custom:image_background="@drawable/platform_pingtai"
+                    custom:text_color="@color/mytextcolorgray"
+                    custom:text_text="@string/lawplateform">
+
+                </dingw.com.newversion.customview.IAVview>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="start"
+                android:layout_marginLeft="2dp"
+                android:layout_marginStart="2dp"
+                android:orientation="vertical"
+                >
+
+                <dingw.com.newversion.customview.IAVview_Horizontal
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:id="@+id/imageaddtext_fragplateform5"
+                    android:layout_marginBottom="2dp"
+                    android:background="@color/white1"
+                    android:layout_weight="1"
+                    custom:it_background="@drawable/platform_jindu"
+                    custom:it_text="@string/caseplan"
+                    >
+
+                </dingw.com.newversion.customview.IAVview_Horizontal>
+
+                <dingw.com.newversion.customview.IAVview_Horizontal
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:id="@+id/imageaddtext_fragplateform6"
+                    android:background="@color/white1"
+                    android:layout_marginBottom="2dp"
+                    android:layout_weight="1"
+                    custom:it_background="@drawable/platform_kaiting"
+                    custom:it_text="@string/netsession"
+                    >
+
+                </dingw.com.newversion.customview.IAVview_Horizontal>
+
+                <dingw.com.newversion.customview.IAVview_Horizontal
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:id="@+id/imageaddtext_fragplateform7"
+                    android:layout_weight="1"
+                    android:background="@color/white1"
+                    android:layout_marginBottom="2dp"
+                    custom:it_background="@drawable/platform_lian"
+                    custom:it_text="@string/netrecord"
+                    custom:it_textcolor="@color/mytextcolorgray"
+                    >
+
+                </dingw.com.newversion.customview.IAVview_Horizontal>
+
+                <dingw.com.newversion.customview.IAVview_Horizontal
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:id="@+id/imageaddtext_fragplateform8"
+                    android:background="@color/white1"
+                    android:layout_weight="1"
+                    custom:it_background="@drawable/platform_chaxun"
+                    custom:it_text="@string/relevance"
+                    custom:it_textcolor="@color/mytextcolorgray"
+                    >
+
+                </dingw.com.newversion.customview.IAVview_Horizontal>
+
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="2dp"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_marginRight="2dp"
+                android:layout_marginEnd="2dp"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:background="@color/white1"
+                android:layout_weight="0.5"
+                >
+
+                <dingw.com.newversion.customview.IAVview
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:background="@color/white1"
+                    custom:image_background="@drawable/platform_zhiku"
+                    custom:image_height="50dp"
+                    custom:image_width="50dp"
+                    custom:text_color="@color/mytextcolorgray"
+                    custom:text_text="@string/library">
+
+                </dingw.com.newversion.customview.IAVview>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="left"
+                android:orientation="vertical">
+
+                <dingw.com.newversion.customview.IAVview_Horizontal
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:id="@+id/imageaddtext_fragplateform9"
+                    android:layout_marginBottom="2dp"
+                    android:layout_weight="1"
+                    android:background="@color/white1"
+                    custom:it_background="@drawable/platform_sudi"
+                    custom:it_text="@string/newlaw"
+                    custom:it_textcolor="@color/mytextcolorblack"
+                    >
+
+                </dingw.com.newversion.customview.IAVview_Horizontal>
+
+                <dingw.com.newversion.customview.IAVview_Horizontal
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:id="@+id/imageaddtext_fragplateform10"
+                    android:layout_marginBottom="2dp"
+                    android:layout_weight="1"
+                    android:background="@color/white1"
+                    custom:it_background="@drawable/platform_fanben"
+                    custom:it_text="@string/contractmode"
+                    custom:it_textcolor="@color/mytextcolorblack"
+                    >
+
+                </dingw.com.newversion.customview.IAVview_Horizontal>
+
+                <dingw.com.newversion.customview.IAVview_Horizontal
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:id="@+id/imageaddtext_fragplateform11"
+                    android:layout_weight="1"
+                    android:background="@color/white1"
+                    custom:it_background="@drawable/platform_wenshu"
+                    custom:it_text="@string/book"
+                    custom:it_textcolor="@color/mytextcolorblack"
+                    >
+
+                </dingw.com.newversion.customview.IAVview_Horizontal>
+
+
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="10dp"
+            >
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:background="@color/white1"
+                android:layout_marginLeft="2dp"
+                android:layout_marginStart="2dp"
+                android:layout_weight="0.5"
+                android:gravity="center">
+                <ImageView
+                    android:layout_width="28dp"
+                    android:layout_height="30dp"
+                    android:background="@drawable/platform_jisuanqi"
+                    android:contentDescription="@null"
+                    />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="start"
+                android:layout_marginLeft="2dp"
+                android:layout_marginStart="2dp"
+                android:weightSum="1">
+
+                <dingw.com.newversion.customview.IAVview_Horizontal
+                    android:layout_width="match_parent"
+                    android:background="@color/white1"
+                    android:id="@+id/imageaddtext_fragplateform12"
+
+                    android:layout_height="50dp"
+                    custom:it_background="@drawable/platform_fljisuanqi"
+                    custom:it_text="@string/lawcalculator"
+                    custom:it_textcolor="@color/mytextcolorblack"
+                    >
+
+                </dingw.com.newversion.customview.IAVview_Horizontal>
+            </LinearLayout>
+
+
+        </LinearLayout>
+    </LinearLayout>
+
+
+
+</ScrollView>

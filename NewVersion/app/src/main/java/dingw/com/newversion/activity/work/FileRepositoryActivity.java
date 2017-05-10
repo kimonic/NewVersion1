@@ -200,6 +200,11 @@ public class FileRepositoryActivity extends BaseActivity implements XListView.IX
     }
 
     @Override
+    public void initLoad() {
+
+    }
+
+    @Override
     public void onClick(View v) {
 
     }

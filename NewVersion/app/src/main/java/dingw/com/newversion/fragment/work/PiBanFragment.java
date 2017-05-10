@@ -24,7 +24,7 @@ public class PiBanFragment extends RefreshBaseFragment {
     }
 
     @Override
-    public void setItemClick() {
+    public void setItemClick(int position) {
 
     }
 

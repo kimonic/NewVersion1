@@ -31,7 +31,7 @@ public class WithdrawsFragment extends RefreshBaseFragment {
     }
 
     @Override
-    public void setItemClick() {
+    public void setItemClick(int position) {
 //        Intent intent=new Intent(getActivity(), WithdrawsDetailsActivity.class);
 //        startActivity(intent);
     }

@@ -27,7 +27,7 @@ public class YiPiBanFragment extends RefreshBaseFragment {
     }
 
     @Override
-    public void setItemClick() {
+    public void setItemClick(int position) {
 
     }
 

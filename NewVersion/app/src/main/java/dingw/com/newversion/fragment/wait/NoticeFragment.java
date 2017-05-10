@@ -1,5 +1,6 @@
 package dingw.com.newversion.fragment.wait;
 
+import android.content.Intent;
 import android.support.v4.app.FragmentActivity;
 import android.util.Log;
 import android.view.View;
@@ -15,9 +16,11 @@ import java.util.ArrayList;
 import java.util.List;
 
 import dingw.com.newversion.R;
+import dingw.com.newversion.activity.work.NoticeDeActivity;
 import dingw.com.newversion.adapter.wait.NoticeXLVAdapter;
 import dingw.com.newversion.base.BaseBean;
 import dingw.com.newversion.base.RefreshBaseFragment;
+import dingw.com.newversion.bean.wait.NoticeBean;
 import dingw.com.newversion.http.HttpGP;
 import dingw.com.newversion.jsonparse.NoticeJsonParse;
 import dingw.com.newversion.utils.ToastUtils;
@@ -52,7 +55,14 @@ public class NoticeFragment extends RefreshBaseFragment {
     }
 
     @Override
-    public void setItemClick() {
+    public void setItemClick(int position) {
+        Log.e("TAG", "setItemClick:------position: "+position
+        +"----list.size():"+list.size()+"----xlvList.getChildCount():"+adapter.getCount());
+//        if (position>0&&position<list.size()+1){
+            Intent intent=new Intent(activity,NoticeDeActivity.class);
+            intent.putExtra("id",((NoticeBean)list.get(position)).getId());
+            startActivity(intent);
+//        }
 
     }
     /**xlistview下拉刷新监听*/

@@ -331,7 +331,10 @@ public class CommonActivity extends BaseActivity {
         tvOpen.setOnClickListener(this);
     }
 
+    @Override
+    public void initLoad() {
 
+    }
 
 
 }

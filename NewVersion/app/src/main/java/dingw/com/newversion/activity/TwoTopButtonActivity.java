@@ -89,6 +89,11 @@ public class TwoTopButtonActivity extends BaseActivity {
     }
 
     @Override
+    public void initLoad() {
+
+    }
+
+    @Override
     public void onClick(View v) {
         switch (v.getId()) {
             case R.id.imageview_casetwo_finish:

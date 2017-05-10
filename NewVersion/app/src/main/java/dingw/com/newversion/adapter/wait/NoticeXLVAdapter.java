@@ -30,6 +30,7 @@ public class NoticeXLVAdapter extends CustomAdapter {
         super(context, list);
     }
 
+
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
         View view;

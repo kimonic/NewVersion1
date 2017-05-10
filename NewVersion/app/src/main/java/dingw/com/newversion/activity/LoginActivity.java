@@ -160,6 +160,11 @@ public class LoginActivity extends BaseActivity {
     }
 
     @Override
+    public void initLoad() {
+
+    }
+
+    @Override
     public void onClick(View v) {
         switch (v.getId()){
             case R.id.tv_temp://不需要密码直接进入主界面
