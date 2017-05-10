@@ -368,6 +368,8 @@
     <string name="bukaifapiaoguanli">补开发票管理</string>
     <string name="meiyoufaxian">没有发现QQ</string>
     <string name="boda">拨打</string>
+    <string name="shujujiazaishibai">数据加载失败!</string>
+    <string name="shujujiazaichenggong">数据加载成功!</string>
 
 
 </resources>

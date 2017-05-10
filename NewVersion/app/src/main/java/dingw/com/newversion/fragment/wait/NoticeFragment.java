@@ -1,6 +1,7 @@
 package dingw.com.newversion.fragment.wait;
 
 import android.support.v4.app.FragmentActivity;
+import android.util.Log;
 import android.view.View;
 import android.widget.BaseAdapter;
 import android.widget.ProgressBar;
@@ -57,6 +58,7 @@ public class NoticeFragment extends RefreshBaseFragment {
     /**xlistview下拉刷新监听*/
     @Override
     public void newRefresh() {
+        page=1;
         HttpGP.sendOkhttpGetRequest(url + "1", new Callback() {
             @Override
             public void onFailure(Call call, IOException e) {

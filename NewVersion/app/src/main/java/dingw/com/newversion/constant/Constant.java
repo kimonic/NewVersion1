@@ -26,6 +26,10 @@ public class Constant {
     public static final String CHANGE_PASSWORD_VERIFY_CODE="login/getVerifyCode";
     /**修改密码提交*/
     public static final String CHANGE_PASSWORD="login/updatePwd";
+    /**我的财务*/
+    public static final String FINANCE=NEWBASEURL+"finance_personal/total";
+    /**主页--待办--网民咨询*/
+    public static final String WANGMINZIXUN=NEWBASEURL+"consult/getList";
 
 
 

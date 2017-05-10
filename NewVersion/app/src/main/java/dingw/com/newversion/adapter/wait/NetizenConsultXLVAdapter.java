@@ -11,7 +11,8 @@ import java.util.List;
 import dingw.com.newversion.R;
 import dingw.com.newversion.base.BaseBean;
 import dingw.com.newversion.base.CustomAdapter;
-import dingw.com.newversion.bean.wait.NetizenConsultBean;
+import dingw.com.newversion.bean.wait.NetizenConsultGbean.ListBean;
+import dingw.com.newversion.bean.wait.NetizenConsultGbean;
 
 /**
  * Created by 12348 on 2017/5/8 0008.
@@ -41,12 +42,12 @@ public class NetizenConsultXLVAdapter extends CustomAdapter {
             view=convertView;
             viewHolder= (ViewHolder) view.getTag();
         }
-        viewHolder.textView1.setText(((NetizenConsultBean)list.get(position)).getTitle());
-        viewHolder.textView2.setText(((NetizenConsultBean)list.get(position)).getTime());
-        viewHolder.textView3.setText(((NetizenConsultBean)list.get(position)).getType());
-        viewHolder.textView4.setText(((NetizenConsultBean)list.get(position)).getContent());
-        viewHolder.textView5.setText(((NetizenConsultBean)list.get(position)).getBrowseNum());
-        viewHolder.textView6.setText(((NetizenConsultBean)list.get(position)).getCommentNum());
+        viewHolder.textView1.setText(((NetizenConsultGbean.ListBean)list.get(position)).getSpecialities_name());
+        viewHolder.textView2.setText(((NetizenConsultGbean.ListBean)list.get(position)).getCreate_time());
+        viewHolder.textView3.setText(((NetizenConsultGbean.ListBean)list.get(position)).getCity_name());
+        viewHolder.textView4.setText(((NetizenConsultGbean.ListBean)list.get(position)).getContent());
+        viewHolder.textView5.setText(((NetizenConsultGbean.ListBean)list.get(position)).getReview_nums());
+        viewHolder.textView6.setText(((NetizenConsultGbean.ListBean)list.get(position)).getReply_num());
 
 
         return view;
