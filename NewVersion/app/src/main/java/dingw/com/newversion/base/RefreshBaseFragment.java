@@ -51,6 +51,7 @@ public abstract class RefreshBaseFragment extends BaseFragment implements XListV
     /***设置xlistview的点击事件*/
     public abstract void setItemClick(int position);
     /**隐藏progressbar,显示xlistview*/
+
     public void showXlistview(){
         pgbFragcommon.setVisibility(View.GONE);
         xlvFragcommon.setVisibility(View.VISIBLE);
@@ -61,6 +62,7 @@ public abstract class RefreshBaseFragment extends BaseFragment implements XListV
         pgbFragcommon.setVisibility(View.VISIBLE);
         xlvFragcommon.setVisibility(View.GONE);
     }
+
     /**设置收下拉刷新*/
     public abstract void newRefresh();
     /**设置上拉加载*/

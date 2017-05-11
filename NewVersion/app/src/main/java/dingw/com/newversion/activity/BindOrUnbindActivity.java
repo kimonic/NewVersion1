@@ -313,10 +313,14 @@ public class BindOrUnbindActivity extends BaseActivity {
      * 启动登录界面
      */
     private void startLoginAct() {
+
         if (myUnbind!=9||unbindSuccess==9){
             setResult(9);
+            openActivity(LoginActivity.class);
+            closeActivity();
+        }else {
+           closeActivity();
         }
-        openActivity(LoginActivity.class);
     }
 
 }
