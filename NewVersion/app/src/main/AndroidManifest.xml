@@ -96,6 +96,7 @@
         <activity android:name=".activity.work.WorkTwoActivity"/>
         <activity android:name=".activity.work.FileRepositoryActivity"/>
         <activity android:name=".activity.work.NoticeDeActivity"/>
+        <activity android:name=".activity.platform.LawCalculatorActivity"/>
 
     </application>
 

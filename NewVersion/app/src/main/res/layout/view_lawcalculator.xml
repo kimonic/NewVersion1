@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_marginTop="20dp"
+                android:id="@+id/imageview_recylawitem1"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:contentDescription="@null"
+                android:background="@color/beijingse"
+                android:src="@drawable/ic_calculator" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:gravity="center"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:id="@+id/textview_recylawitem1"
+                android:textSize="12sp"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="20dp"
+                />
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_gravity="bottom"
+                android:id="@+id/imageview_recylawitem2"
+                android:background="@color/fengexian"
+                android:contentDescription="@null"
+                />
+
+        </LinearLayout>
+        <ImageView
+            android:layout_width="2dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="end"
+            android:id="@+id/imageview_recylawitem3"
+            android:background="@color/fengexian"
+            android:contentDescription="@null"
+            />
+
+
+    </LinearLayout>
+
+
+</LinearLayout>

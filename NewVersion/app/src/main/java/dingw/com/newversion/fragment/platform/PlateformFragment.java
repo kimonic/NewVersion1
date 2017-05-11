@@ -1,14 +1,9 @@
 package dingw.com.newversion.fragment.platform;
 
 import android.content.Intent;
-import android.os.Bundle;
-import android.view.LayoutInflater;
 import android.view.View;
-import android.view.ViewGroup;
 
 import butterknife.BindView;
-import butterknife.ButterKnife;
-import butterknife.Unbinder;
 import dingw.com.newversion.R;
 import dingw.com.newversion.activity.StartCommonActivity;
 import dingw.com.newversion.activity.work.WorkTwoActivity;
@@ -60,21 +55,21 @@ public class PlateformFragment extends BaseFragment {
     @Override
     public void onClick(View v) {
         switch (v.getId()){
-//            case R.id.imageaddtext_fragplateform1:
-//                StartCommonActivity.startAct(getActivity(),new String[]{"未处理","已联系","已完成"},new int[]{0,49,50},"网民委托",false,"");
-//                break;
-//            case R.id.imageaddtext_fragplateform2:
-//                StartCommonActivity.startAct(getActivity(),new String[]{"待支付","待确认","重新上传","已完成"},new int[]{51,0,0,52},"委托订单",false,"");
-//                break;
+            case R.id.imageaddtext_fragplateform1:
+                StartCommonActivity.startAct(getActivity(),new String[]{"未处理","已联系","已完成"},new int[]{0,49,50},"网民委托",false,"");
+                break;
+            case R.id.imageaddtext_fragplateform2:
+                StartCommonActivity.startAct(getActivity(),new String[]{"待支付","待确认","重新上传","已完成"},new int[]{51,0,0,52},"委托订单",false,"");
+                break;
             case R.id.imageaddtext_fragplateform3:
                 StartCommonActivity.startAct(getActivity(),new String[]{"未受理","已受理"},new int[]{0,0},"法律服务订单",true,"产品");
                 break;
-//            case R.id.imageaddtext_fragplateform4:
-//                StartCommonActivity.startAct(getActivity(),new String[]{"我的标书","所有标书"},new int[]{53,53},"法律服务招投标管理",true,"招标说明");
-//                break;
-//            case R.id.imageaddtext_fragplateform5:
-//                StartCommonActivity.startAct(getActivity(),new String[]{""},new int[]{3},"案件进度",false,"");
-//                break;
+            case R.id.imageaddtext_fragplateform4:
+                StartCommonActivity.startAct(getActivity(),new String[]{"我的标书","所有标书"},new int[]{53,53},"法律服务招投标管理",true,"招标说明");
+                break;
+            case R.id.imageaddtext_fragplateform5:
+                StartCommonActivity.startAct(getActivity(),new String[]{""},new int[]{3},"案件进度",false,"");
+                break;
             case R.id.imageaddtext_fragplateform6:
                 StartCommonActivity.startAct(getActivity(),new String[]{""},new int[]{0},"网上开庭",false,"");
                 break;
@@ -87,15 +82,15 @@ public class PlateformFragment extends BaseFragment {
             case R.id.imageaddtext_fragplateform9:
                 startMyActivity("新法速递",0, WorkTwoActivity.class,new int[]{36},1,"",1);
                 break;
-//            case R.id.imageaddtext_fragplateform10:
-//                startMyActivity("合同范本",0, WorkTwoActivity.class,new int[]{54},1,"",1);
-//                break;
-//            case R.id.imageaddtext_fragplateform11:
-//                StartCommonActivity.startAct(getActivity(),new String[]{"刑事","民事","行政","仲裁"},new int[]{55,55,55,55},"文书",false,"");
-//                break;
-//            case R.id.imageaddtext_fragplateform12:
-//                StartCommonActivity.startAct(getActivity(),new String[]{""},new int[]{4},"法律计算器",false,"");
-//                break;
+            case R.id.imageaddtext_fragplateform10:
+                startMyActivity("合同范本",0, WorkTwoActivity.class,new int[]{54},1,"",1);
+                break;
+            case R.id.imageaddtext_fragplateform11:
+                StartCommonActivity.startAct(getActivity(),new String[]{"刑事","民事","行政","仲裁"},new int[]{55,55,55,55},"文书",false,"");
+                break;
+            case R.id.imageaddtext_fragplateform12:
+                StartCommonActivity.startAct(getActivity(),new String[]{""},new int[]{4},"法律计算器",false,"");
+                break;
         }
     }
 
