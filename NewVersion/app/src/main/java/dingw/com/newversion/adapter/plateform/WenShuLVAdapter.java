@@ -12,6 +12,7 @@ import dingw.com.newversion.R;
 import dingw.com.newversion.base.BaseBean;
 import dingw.com.newversion.base.CustomAdapter;
 import dingw.com.newversion.bean.platform.WenShuBean;
+import dingw.com.newversion.bean.platform.WenShuBean1;
 
 /**
  * Created by 12348 on 2017/5/11 0011.
@@ -40,8 +41,8 @@ public class WenShuLVAdapter extends CustomAdapter {
         }
 
 
-        viewHolder.textView1.setText(((WenShuBean)list.get(position)).getNum());
-        viewHolder.textView2.setText(((WenShuBean)list.get(position)).getTitle());
+        viewHolder.textView1.setText(((WenShuBean1.DocumentListBean)list.get(position)).getNumber());
+        viewHolder.textView2.setText(((WenShuBean1.DocumentListBean)list.get(position)).getName());
         viewHolder.textView3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

@@ -1,6 +1,7 @@
 package dingw.com.newversion.fragment.platform;
 
 import android.animation.ValueAnimator;
+import android.util.Log;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.LinearLayout;
@@ -8,6 +9,10 @@ import android.widget.ListAdapter;
 import android.widget.ListView;
 import android.widget.TextView;
 
+import com.google.gson.Gson;
+import com.google.gson.reflect.TypeToken;
+
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -18,6 +23,13 @@ import dingw.com.newversion.adapter.plateform.WenShuLVAdapter;
 import dingw.com.newversion.base.BaseBean;
 import dingw.com.newversion.base.BaseFragment;
 import dingw.com.newversion.bean.platform.WenShuBean;
+import dingw.com.newversion.bean.platform.WenShuBean1;
+import dingw.com.newversion.constant.Constant;
+import dingw.com.newversion.http.HttpGP;
+import dingw.com.newversion.utils.ToastUtils;
+import okhttp3.Call;
+import okhttp3.Callback;
+import okhttp3.Response;
 
 /**
  * Created by 12348 on 2017/5/11 0011.
@@ -47,6 +59,8 @@ public class WenShuFragment extends BaseFragment {
 
     private float changeHeight;
 
+    private int type;
+
 
     @Override
     public int setResid() {
@@ -69,52 +83,137 @@ public class WenShuFragment extends BaseFragment {
 
     @Override
     public void initData() {
+        if (getArguments()!=null){
+            type=getArguments().getInt("type",0);
+        }
+        String url1= Constant.WENSHU+type+"&mark=1";
+        String url2= Constant.WENSHU+type+"&mark=2";
+
         list1 = new ArrayList<>();
         list2 = new ArrayList<>();
-        for (int i = 0; i < 15; i++) {
-            WenShuBean bean = new WenShuBean();
-            if (i<9){
-                bean.setNum("0" + (i + 1));
-            }else {
-                bean.setNum("" + (i + 1));
+
+        HttpGP.sendOkhttpGetRequest(url1, new Callback() {
+            @Override
+            public void onFailure(Call call, IOException e) {
+               fail();
+
             }
-            bean.setTitle("文件" + i);
-            list1.add(bean);
-            list2.add(bean);
-        }
+
+            @Override
+            public void onResponse(Call call, Response response) throws IOException {
+                String str1=response.body().string();
+                Gson gson=new Gson();
+                WenShuBean1 wen1= gson.fromJson(str1,new TypeToken<WenShuBean1>(){}.getType());
+                if (wen1.getState().equals("200")){
+                    for (int i = 0; i < wen1.getDocument_list().size(); i++) {
+                        list1.add(wen1.getDocument_list().get(i));
+                    }
+                    sucess1();
+                }else {
+                    fail();
+                }
+
+
+            }
+        }, getActivity());
+        HttpGP.sendOkhttpGetRequest(url2, new Callback() {
+            @Override
+            public void onFailure(Call call, IOException e) {
+                fail();
+            }
+
+            @Override
+            public void onResponse(Call call, Response response) throws IOException {
+                String str2=response.body().string();
+                Gson gson=new Gson();
+                WenShuBean1 wen1= gson.fromJson(str2,new TypeToken<WenShuBean1>(){}.getType());
+                if (wen1.getState().equals("200")){
+                    for (int i = 0; i < wen1.getDocument_list().size(); i++) {
+                        list2.add(wen1.getDocument_list().get(i));
+                    }
+                    sucess2();
+                }else {
+                    fail();
+                }
+            }
+        }, getActivity());
+
+
+
+
+
+//        for (int i = 0; i < 15; i++) {
+//            WenShuBean bean = new WenShuBean();
+//            if (i<9){
+//                bean.setNum("0" + (i + 1));
+//            }else {
+//                bean.setNum("" + (i + 1));
+//            }
+//            bean.setTitle("文件" + i);
+//            list1.add(bean);
+//            list2.add(bean);
+//        }
+    }
+    /**加载数据成功*/
+    private void sucess1() {
+        getActivity().runOnUiThread(new Runnable() {
+            @Override
+            public void run() {
+                texCount1.setText(""+list1.size());
+                adapter1=new WenShuLVAdapter(getActivity(),list1);
+                listview1.setAdapter(adapter1);
+                linHeight1=getListViewHeight(listview1);
+                LinearLayout.LayoutParams params1=new LinearLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT,linHeight1);
+                linearlayout1.setLayoutParams(params1);
+                adapter1.notifyDataSetChanged();
+
+
+            }
+        });
+    }
+    /**加载数据成功*/
+    private void sucess2() {
+        getActivity().runOnUiThread(new Runnable() {
+            @Override
+            public void run() {
+                texCount2.setText(""+list2.size());
+                adapter2=new WenShuLVAdapter(getActivity(),list2);
+                listview2.setAdapter(adapter2);
+                linHeight2=getListViewHeight(listview2);
+                LinearLayout.LayoutParams params2=new LinearLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT,linHeight2);
+                linearlayout2.setLayoutParams(params2);
+                adapter2.notifyDataSetChanged();
+
+            }
+        });
     }
 
     @Override
     public void initView() {
-        texCount1.setText(""+list1.size());
-        texCount2.setText(""+list2.size());
 
-        adapter1=new WenShuLVAdapter(getActivity(),list1);
-        adapter2=new WenShuLVAdapter(getActivity(),list2);
 
-        listview1.setAdapter(adapter1);
-        listview2.setAdapter(adapter2);
 
-        linHeight1=getListViewHeight(listview1);
-        linHeight2=getListViewHeight(listview2);
 
-        flexButton1.setOnClickListener(this);
-        flexButton2.setOnClickListener(this);
-
-        LinearLayout.LayoutParams params1=new LinearLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT,linHeight1);
-        linearlayout1.setLayoutParams(params1);
-        LinearLayout.LayoutParams params2=new LinearLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT,linHeight2);
-        linearlayout2.setLayoutParams(params2);
     }
 
     @Override
     public void initListener() {
-
+        flexButton1.setOnClickListener(this);
+        flexButton2.setOnClickListener(this);
     }
 
     @Override
     public void initLoad() {
 
+    }
+    /**加载数据失败*/
+    private void fail(){
+        getActivity().runOnUiThread(new Runnable() {
+            @Override
+            public void run() {
+                ToastUtils.showToast(getActivity(),R.string.shujujiazaishibai);
+            }
+        });
     }
 
     /**显示点击伸缩动画

@@ -7,7 +7,8 @@ package dingw.com.newversion.constant;
 
 public class Constant {
     public static final String BASEurl="http://ceshi.12348oa.com/v1.4/lawyerapp/";
-    public static final String NEWBASEURL="http://ceshi.12348oa.com/flfw/";
+//    public static final String NEWBASEURL="http://ceshi.12348oa.com/flfw/";
+    public static final String NEWBASEURL="https://develapi.12348oa.com/flfw/";
     public static final String WORK_BASEURL="http://ceshi.12348oa.com/flfw/";
     public static final String NOTICE_SEARCH_URL="http://ceshi.12348oa.com/flfw/bulletin/getList?seach=";
     public static final String MINUTE_SEARCH_URL="http://ceshi.12348oa.com/flfw/minute/getList??seach=";
@@ -32,6 +33,8 @@ public class Constant {
     public static final String WANGMINZIXUN=NEWBASEURL+"consult/getList";
     /**主页--工作--本所公告--详情*/
     public static final String BENSUOGONGGAO_DEETAILS=NEWBASEURL+"bulletin/getDetails?id=";
+    /**主页--平台--文书*/
+    public static final String WENSHU=NEWBASEURL+"document/getList?type=";
 
 
 

@@ -249,7 +249,7 @@ public class FragmentFactory {
                 fragment=new ContractModelFragment();
                 break;
             case 55://主页--平台--文书
-                fragment=new WenShuFragment();
+                createWenShuFragment(1);
                 break;
             case 56://主页--待办--email点击--通知
                 fragment=new EMailFragment();
@@ -257,12 +257,26 @@ public class FragmentFactory {
             case 57://主页--待办--email点击--消息
                 fragment=new NewsFragment();
                 break;
-//            case 58:break;
-//            case 59:break;
-//            case 60:break;
+            case 58:
+                createWenShuFragment(2);
+                break;
+            case 59:
+                createWenShuFragment(3);
+                break;
+            case 60:
+                createWenShuFragment(4);
+                break;
         }
         return fragment;
     }
+    /**创建文书fragment*/
+    private void createWenShuFragment(int type) {
+        fragment=new WenShuFragment();
+        Bundle bundle=new Bundle();
+        bundle.putInt("type",type);
+        fragment.setArguments(bundle);
+    }
+
     /**创建委托订单fragment*/
     private void createEntrustIndentFragment(int type) {
         fragment=new EntrustIndentFragment();

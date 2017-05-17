@@ -86,7 +86,7 @@ public class PlateformFragment extends BaseFragment {
                 startMyActivity("合同范本",0, WorkTwoActivity.class,new int[]{54},1,"",1);
                 break;
             case R.id.imageaddtext_fragplateform11:
-                StartCommonActivity.startAct(getActivity(),new String[]{"刑事","民事","行政","仲裁"},new int[]{55,55,55,55},"文书",false,"");
+                StartCommonActivity.startAct(getActivity(),new String[]{"刑事","民事","行政","仲裁"},new int[]{55,58,59,60},"文书",false,"");
                 break;
             case R.id.imageaddtext_fragplateform12:
                 StartCommonActivity.startAct(getActivity(),new String[]{""},new int[]{4},"法律计算器",false,"");
