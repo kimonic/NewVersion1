@@ -66,7 +66,6 @@ public class IAVview_Horizontal extends LinearLayout {
         textSize=ta.getDimension(R.styleable.ImageAddText_Horizontal_it_textsize,0);
         res=ta.getDrawable(R.styleable.ImageAddText_Horizontal_it_background);
 
-        Log.e("TAG", "initView: ---123-" +textContent+res);
 
         ta.recycle();
 

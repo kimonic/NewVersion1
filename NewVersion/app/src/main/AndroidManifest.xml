@@ -98,6 +98,8 @@
         <activity android:name=".activity.work.NoticeDeActivity"/>
         <activity android:name=".activity.platform.LawCalculatorActivity"/>
 
+        <activity android:name=".activity.community.ZhuanZaiMediaaActivity"/>
+
     </application>
 
 </manifest>

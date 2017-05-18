@@ -77,68 +77,68 @@ public class FragmentFactory {
                 break;
 
             case 5://平台--法律计算器--诉讼费计算器fragment
-                createCalculatorFrag("http://share.12348flfw.com/tool/susongfei.html");
+                createCalculatorFrag("https://www.12348flfw.com/tool/susongfei.html");
                 break;
             case 6://平台--法律计算器--律师费计算器fragment
-                createCalculatorFrag("http://share.12348flfw.com/tool/lvshifei.html");
+                createCalculatorFrag("https://www.12348flfw.com/tool/lvshifei.html");
                 break;
             case 7://平台--法律计算器--银行贷款利息计算器
-                createCalculatorFrag("http://share.12348flfw.com/tool/yinhangfei.html");
+                createCalculatorFrag("https://www.12348flfw.com/tool/yinhangfei.html");
                 break;
             case 8://平台--法律计算器--财产保全案件计算器
-                createCalculatorFrag("http://share.12348flfw.com/tool/baoquan.html");
+                createCalculatorFrag("https://www.12348flfw.com/tool/baoquan.html");
 
                 break;
 
 
             case 9://平台--法律计算器--执行费计算器
-                createCalculatorFrag("http://share.12348flfw.com/tool/zhixing.html");
+                createCalculatorFrag("https://www.12348flfw.com/tool/zhixing.html");
                 break;
             case 10://平台--法律计算器--医保计算器
-                createCalculatorFrag("http://share.12348flfw.com/tool/yibao.html");
+                createCalculatorFrag("https://www.12348flfw.com/tool/yibao.html");
                 break;
             case 11://平台--法律计算器--日期计算器
-                createCalculatorFrag("http://share.12348flfw.com/tool/riqi.html");
+                createCalculatorFrag("https://www.12348flfw.com/tool/riqi.html");
                 break;
 
 
             case 12://平台--法律计算器--延迟利息计算器
-                createCalculatorFrag("http://share.12348flfw.com/tool/yanchi.html");
+                createCalculatorFrag("https://www.12348flfw.com/tool/yanchi.html");
                 break;
             case 13://平台--法律计算器--违约金计算器
-                createCalculatorFrag("http://share.12348flfw.com/tool/weiyue.html");
+                createCalculatorFrag("https://www.12348flfw.com/tool/weiyue.html");
                 break;
             case 14://平台--法律计算器--人身损害赔偿计算器
-                createCalculatorFrag("http://share.12348flfw.com/tool/renshen.html");
+                createCalculatorFrag("https://www.12348flfw.com/tool/renshen.html");
                 break;
 
 
             case 15://平台--法律计算器--拍卖佣金计算器
-                createCalculatorFrag(" http://share.12348flfw.com/tool/paimai.html");
+                createCalculatorFrag(" https://www.12348flfw.com/tool/paimai.html");
                 break;
             case 16://平台--法律计算器--司法鉴定费计算器
-                createCalculatorFrag(" http://share.12348flfw.com/tool/sifa.html");
+                createCalculatorFrag(" https://www.12348flfw.com/tool/sifa.html");
                 break;
             case 17://平台--法律计算器--仲裁费用计算器
-                createCalculatorFrag("http://share.12348flfw.com/tool/zhongcai.html");
+                createCalculatorFrag("https://www.12348flfw.com/tool/zhongcai.html");
                 break;
 
 
 
             case 18://平台--法律计算器--房屋还贷计算器
-                createCalculatorFrag("http://share.12348flfw.com/tool/fangdai.html");
+                createCalculatorFrag("https://www.12348flfw.com/tool/fangdai.html");
                 break;
             case 19://平台--法律计算器--离婚房产分割计算器
-                createCalculatorFrag("http://share.12348flfw.com/tool/lihun.html");
+                createCalculatorFrag("https://www.12348flfw.com/tool/lihun.html");
                 break;
             case 20://平台--法律计算器--拆迁补偿计算器
-                createCalculatorFrag(" http://share.12348flfw.com/tool/chaiqian.html");
+                createCalculatorFrag(" https://www.12348flfw.com/tool/chaiqian.html");
                 break;
 
 
 
             case 21://平台--法律计算器--征地补偿计算器
-                createCalculatorFrag("http://share.12348flfw.com/tool/zhengdi.html");
+                createCalculatorFrag("https://www.12348flfw.com/tool/zhengdi.html");
                 break;
             case 22://平台--法律计算器--法律法规信息查询
                 createCalculatorFrag("http://search.chinalaw.gov.cn/search2.html");
@@ -171,10 +171,10 @@ public class FragmentFactory {
                 break;
             case 30://工作--本所公告--
 //                fragment=new FragmentNotice();
-                createNoticeFrag("http://ceshi.12348oa.com/flfw/bulletin/getList?page=",1);
+                createNoticeFrag("https://develapi.12348oa.com/flfw/bulletin/getList?page=",1);
                 break;
             case 31://工作--会议记录
-                createNoticeFrag("http://ceshi.12348oa.com/flfw/minute/getList?page=",2);
+                createNoticeFrag("https://develapi.12348oa.com/flfw/minute/getList?page=",2);
                 break;
             case 32://待办--案件--诉讼案件--已批办
                 fragment= new YiPiBanFragment();

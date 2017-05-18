@@ -17,11 +17,16 @@ import android.widget.TextView;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
-import dingw.com.newversion.developkit.AutoBindUnbind;
 import dingw.com.newversion.R;
+import dingw.com.newversion.activity.community.ZhuanZaiMediaaActivity;
 import dingw.com.newversion.base.BaseActivity;
 import dingw.com.newversion.customview.TopBar;
+import dingw.com.newversion.developkit.AutoBindUnbind;
+import dingw.com.newversion.fragment.NoContentFragment;
+import dingw.com.newversion.fragment.community.InterflowAreaFragment;
+import dingw.com.newversion.fragment.community.LawyerMideaFragment;
 import dingw.com.newversion.fragment.platform.PlateformFragment;
+import dingw.com.newversion.fragment.wait.NetizenConsultFragment;
 import dingw.com.newversion.fragment.wait.WaitFragment;
 import dingw.com.newversion.fragment.work.WorkFragment;
 
@@ -94,27 +99,26 @@ public class HomeActivity extends BaseActivity {
      * 平台fragment
      */
     private PlateformFragment fragment_plateform;
-//    /**
-//     * 律师自媒体fragment
-//     */
-////    private Fragment_Community fragment_community;
-//    private FragmentlawyerMidea   fragment_community;
+    /**
+     * 律师自媒体fragment
+     */
+    private LawyerMideaFragment fragment_community;
     /**
      * 社区--topbar-add--type
      */
     private int addType = 0;
-//    /**
-//     * 网民咨询区fragment------------------------------------------------------------
-//     */
-//    private FragmentNetizenConsult fragmentNetizenConsult;
-//    /**
-//     * 交流区fragment------------------------------------------------------------
-//     */
-//    private FragmentInterflowArea fragmentInterflowArea;
-//    /**
-//     * 协助区与分享区fragment,目前无内容------------------------------------------------------------
-//     */
-//    private Fragment_NoContent fragment_noContent1,fragment_noContent2;
+    /**
+     * 网民咨询区fragment------------------------------------------------------------
+     */
+    private NetizenConsultFragment fragmentNetizenConsult;
+    /**
+     * 交流区fragment------------------------------------------------------------
+     */
+    private InterflowAreaFragment fragmentInterflowArea;
+    /**
+     * 协助区与分享区fragment,目前无内容------------------------------------------------------------
+     */
+    private NoContentFragment fragment_noContent1,fragment_noContent2;
       private AlertDialog dialog;
 
 
@@ -175,57 +179,55 @@ public class HomeActivity extends BaseActivity {
 
                 //单项点击事件
                 switch (position) {
-//                    case 0://律师自媒体
-//                        if (fragment_community == null) {
-//                            fragment_community = new FragmentlawyerMidea();
-//                            fragmentTransaction.add(R.id.fragment_container, fragment_community);
-//                        } else {
-//                            fragmentTransaction.show(fragment_community);
-//                        }
-//                        break;
-//                    case 1://分享区
-////                        addNewFragment(fragment_noContent1);//使用封装方法fragment作为参数不能实例化
-//                        if (fragment_noContent1 == null) {
-//                            fragment_noContent1 = new Fragment_NoContent();
-//                            fragmentTransaction.add(R.id.fragment_container, fragment_noContent1);
-//                        } else {
-//                            fragmentTransaction.show(fragment_noContent2);
-//                        }
-//                        break;
-//                    case 2://协助区
-////                        addNewFragment(fragment_noContent2);
-//                        if (fragment_noContent2 == null) {
-//                            fragment_noContent2 = new Fragment_NoContent();
-//                            fragmentTransaction.add(R.id.fragment_container, fragment_noContent2);
-//                        } else {
-//                            fragmentTransaction.show(fragment_noContent2);
-//                        }
-//                        break;
-//                    case 3://交流区
-//                        if (fragmentInterflowArea == null) {
-//                            fragmentInterflowArea = new FragmentInterflowArea();
-//                            fragmentTransaction.add(R.id.fragment_container, fragmentInterflowArea);
-//                        } else {
-//                            fragmentTransaction.show(fragmentInterflowArea);
-//                        }
-//                        break;
-//                    case 4://网民咨询区
-//                        imageViewAdd.setVisibility(View.GONE);
-//                        if (fragmentNetizenConsult == null) {
-//                            fragmentNetizenConsult = new FragmentNetizenConsult();
-//                            fragmentTransaction.add(R.id.fragment_container, fragmentNetizenConsult);
-//                        } else {
-//                            fragmentTransaction.show(fragmentNetizenConsult);
-//                        }
-//                        break;
-//                    case 5://我的收藏
-//                        if (tv!=null){
-//                            tv.setText(getResources().getTextArray(R.array.lvshizimeiti)[addType]);
-//                        }
-//                        spinner.setSelection(addType);//将选中位置设为上一个
-//                        StartCommonActivity.startCommonActivity(HomeActivity.this,
-//                                new String[]{"分享区", "协助区", "交流区", "自媒体", "咨询区"}, new int[]{0, 0, 0, 0, 0}, "我的收藏",false, "");
-//                        break;
+                    case 0://律师自媒体
+                        if (fragment_community == null) {
+                            fragment_community = new LawyerMideaFragment();
+                            fragmentTransaction.add(R.id.fragment_container, fragment_community);
+                        } else {
+                            fragmentTransaction.show(fragment_community);
+                        }
+                        break;
+                    case 1://分享区
+                        if (fragment_noContent1 == null) {
+                            fragment_noContent1 = new NoContentFragment();
+                            fragmentTransaction.add(R.id.fragment_container, fragment_noContent1);
+                        } else {
+                            fragmentTransaction.show(fragment_noContent2);
+                        }
+                        break;
+                    case 2://协助区
+                        if (fragment_noContent2 == null) {
+                            fragment_noContent2 = new NoContentFragment();
+                            fragmentTransaction.add(R.id.fragment_container, fragment_noContent2);
+                        } else {
+                            fragmentTransaction.show(fragment_noContent2);
+                        }
+                        break;
+                    case 3://交流区
+                        if (fragmentInterflowArea == null) {
+                            fragmentInterflowArea = new InterflowAreaFragment();
+                            fragmentTransaction.add(R.id.fragment_container, fragmentInterflowArea);
+                        } else {
+                            fragmentTransaction.show(fragmentInterflowArea);
+                        }
+                        break;
+                    case 4://网民咨询区
+                        ivHomeadd.setVisibility(View.GONE);
+                        if (fragmentNetizenConsult == null) {
+                            fragmentNetizenConsult = new NetizenConsultFragment();
+                            fragmentTransaction.add(R.id.fragment_container, fragmentNetizenConsult);
+                        } else {
+                            fragmentTransaction.show(fragmentNetizenConsult);
+                        }
+                        break;
+                    case 5://我的收藏
+                        if (tv!=null){
+                            tv.setText(getResources().getTextArray(R.array.lvshizimeiti)[addType]);
+                        }
+                        spinnerHome.setSelection(addType);//将选中位置设为上一个
+                        StartCommonActivity.startAct(HomeActivity.this,
+                                new String[]{"分享区", "协助区", "交流区", "自媒体", "咨询区"}, new int[]{0, 0, 0, 0, 0}, "我的收藏",false, "");
+                        break;
                 }
                 fragmentTransaction.commitAllowingStateLoss();
 
@@ -253,12 +255,12 @@ public class HomeActivity extends BaseActivity {
                 startAddType();
                 break;
             case R.id.textview_dialog1://dialog按钮点击事件处理
-//                startMyActivity("发布分享", 1, CommunityTwoActivity.class);
-//                dialog.dismiss();
+                startMyActivity("发布分享", 1, ZhuanZaiMediaaActivity.class);
+                dialog.dismiss();
                 break;
             case R.id.textview_dialog2://dialog按钮点击事件处理
-//                startMyActivity("转载分享", 2, CommunityTwoActivity.class);
-//                dialog.dismiss();
+                startMyActivity("转载分享", 2, ZhuanZaiMediaaActivity.class);
+                dialog.dismiss();
                 break;
             default:
                 fragmentTransaction = fragmentManager.beginTransaction();
@@ -282,7 +284,7 @@ public class HomeActivity extends BaseActivity {
     private void startAddType() {
         switch (addType) {
             case 0:
-//                startMyActivity("律师自媒体", 0, CommunityTwoActivity.class);
+                startMyActivity("律师自媒体", 0, ZhuanZaiMediaaActivity.class);
                 break;
             case 1:
                 View view = LayoutInflater.from(this).inflate(R.layout.dialog_item1, null);
@@ -295,10 +297,10 @@ public class HomeActivity extends BaseActivity {
                 textView2.setOnClickListener(this);
                 break;
             case 2:
-//                startMyActivity("协助发布", 3, CommunityTwoActivity.class);
+                startMyActivity("协助发布", 3, ZhuanZaiMediaaActivity.class);
                 break;
             case 3:
-//                startMyActivity("发布交流", 4, CommunityTwoActivity.class);
+                startMyActivity("发布交流", 4, ZhuanZaiMediaaActivity.class);
                 break;
             case 4:
                 break;
@@ -379,13 +381,12 @@ public class HomeActivity extends BaseActivity {
         changeBack(llCominutyTv, llCominutyIv, true, R.drawable.community_pre);
         topbar.setVisibility(View.GONE);
         flHome.setVisibility(View.VISIBLE);
-//                topBar.setText("律师自媒体");----------------------------------
-//        if (fragment_community == null) {
-//            fragment_community = new FragmentlawyerMidea();
-//            fragmentTransaction.add(R.id.fragment_container, fragment_community);
-//        } else {
-//            fragmentTransaction.show(fragment_community);
-//        }
+        if (fragment_community == null) {
+            fragment_community = new LawyerMideaFragment();
+            fragmentTransaction.add(R.id.fragment_container, fragment_community);
+        } else {
+            fragmentTransaction.show(fragment_community);
+        }
     }
     /**
      * 改变button状态为抬起
@@ -423,21 +424,21 @@ public class HomeActivity extends BaseActivity {
         if (fragment_plateform != null) {
             fragmentTransaction.hide(fragment_plateform);
         }
-//        if (fragment_community != null) {
-//            fragmentTransaction.hide(fragment_community);
-//        }
-//        if (fragmentNetizenConsult != null) {
-//            fragmentTransaction.hide(fragmentNetizenConsult);
-//        }
-//        if (fragmentInterflowArea!=null){
-//            fragmentTransaction.hide(fragmentInterflowArea);
-//        }
-//        if (fragment_noContent1!=null){
-//            fragmentTransaction.hide(fragment_noContent1);
-//        }
-//        if (fragment_noContent2!=null){
-//            fragmentTransaction.hide(fragment_noContent2);
-//        }
+        if (fragment_community != null) {
+            fragmentTransaction.hide(fragment_community);
+        }
+        if (fragmentNetizenConsult != null) {
+            fragmentTransaction.hide(fragmentNetizenConsult);
+        }
+        if (fragmentInterflowArea!=null){
+            fragmentTransaction.hide(fragmentInterflowArea);
+        }
+        if (fragment_noContent1!=null){
+            fragmentTransaction.hide(fragment_noContent1);
+        }
+        if (fragment_noContent2!=null){
+            fragmentTransaction.hide(fragment_noContent2);
+        }
 
     }
 

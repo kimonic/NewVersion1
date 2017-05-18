@@ -20,7 +20,7 @@ public class Constant {
     /**解除绑定url连接*/
     public static final String UNBIND_URL="login/relieveBindLawyer";
     /**律师自媒体列表*/
-    public static final String LAWYER_ZIMEITI="selfmedia/getList";
+    public static final String LAWYER_ZIMEITI=NEWBASEURL+"selfmedia/getList";
     /**律师自媒体列表详情*/
     public static final String LAWYER_ZIMEITI_DETAILS="selfmedia/getDetails";
     /**修改密码获取验证码*/

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="20dp"
+    android:height="20dp"
+    android:viewportHeight="18"
+    android:viewportWidth="20">
+    <!-- draw a path -->
+    <group>
+        <!--M (x y) 把画笔移动到x,y，要准备在这个地方画图了。-->
+        <!--L (x y) 直线连到x,y，还有简化命令H(x) 水平连接、V(y)垂直连接。-->
+        <!--Z，没有参数，连接起点和终点-->
+        <!--C(x1 y1 x2 y2 x y)，控制点（x1,y1）（ x2,y2），终点x,y 。-->
+        <!--Q(x1 y1 x y)，控制点（x1,y1），终点x,y-->
+        <!--C和Q会在下文做简单对比。-->
+        <!--A(rx ry x-axis-rotation large-arc-flag sweep-flag x y)-->
+
+        <!--android:pathData=" M50,50 a10,10 1,1 0 1,0" />-->
+        <!--rx ry 椭圆半径-->
+        <!--x-axis-rotation x轴旋转角度-->
+        <!--large-arc-flag 为0时表示取小弧度，1时取大弧度 （舍取的时候，是要长的还是短的）-->
+        <!--sweep-flag 0取逆时针方向，1取顺时针方向-->
+    <path android:fillColor="#EF6467"
+        android:pathData="M14.5,0
+            c-1.955,0,        -3.83,1.268,           -4.5,3
+            c-0.67,-1.732,-2.547,-3,-4.5,-3
+            C2.957,0,       1,1.068,        1,5.5
+            c0,3.53,3.793,6.257,9,11.5
+            c5.207,-5.242,9,-7.97,9,-11.5
+            C19,1.068,     17.043,0,         14.5,0z"
+        />
+              <!--/**-->
+        <!--和上面类似，主要是android:pathData改变了。从（20.5,9.5）开始，然后就是后面画贝塞尔曲线，-->
+        <!--相对起点水平左移1.955，垂直不移动确定一个点，然后相对起点水平左移动-3.83，
+        垂直往下移动1.268确定一个点，-->
+        <!--再相对起点水平左移4.5，垂直往下移动3确定一个点，通过这三个点画贝塞尔曲线，往下的类似原理。-->
+
+        <!--ps： 一些简单的命令我们是知道了，那么svg这么多命令，android里面这么多icon，总不能让自己画吧，-->
+        <!--我们怎么去学习这些命令，去画这些icon呢。还好学习命令我们可以用android:path规则 -->
+        <!--，画icon的pathData数据 。这样我们就可以画出自己想要的数据来了。-->
+      -->
+    </group>
+
+</vector>

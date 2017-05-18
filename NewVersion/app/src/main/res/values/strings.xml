@@ -394,6 +394,14 @@
     <string name="shixinzhixing">失信执行人查询</string>
     <string name="beizhixing">被执行人信息查询</string>
     <string name="tudizhengshu">土地证书编号查询</string>
+    <string name="shifoufangqi">是否放弃发布?</string>
+    <string name="fangqi">放弃</string>
+    <string name="qitaxiezhu">请填写其他协助条件</string>
+    <string name="qitatiaojian">其他条件</string>
+    <string name="xiezhulvshi">请选择协助律师分类</string>
+    <string name="xiezhufenlei">协助分类</string>
+    <string name="xuanzediqu">请选择地区</string>
+    <string name="diqu">地\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020区</string>
 
 
 </resources>
