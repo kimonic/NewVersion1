@@ -7,11 +7,9 @@ import android.content.pm.ApplicationInfo;
 import android.content.pm.PackageManager;
 import android.net.Uri;
 import android.os.Build;
-import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
-import android.widget.Toast;
 
 import com.umeng.socialize.ShareAction;
 import com.umeng.socialize.UMShareAPI;
@@ -25,6 +23,7 @@ import java.util.List;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
+import dingw.com.newversion.Main22Activity;
 import dingw.com.newversion.R;
 import dingw.com.newversion.activity.BindOrUnbindActivity;
 import dingw.com.newversion.adapter.wait.MyLVAdapter;
@@ -47,20 +46,20 @@ public class MyActivity extends BaseActivity {
 
 
     private static final String TAG = "listview";
-    String content[] = {
-            "我的收藏",
-            "已下载文件",
-            "推送设置",
-            "解除绑定",
-            "修改密码",
-            "清除缓存",
-            "分享给小伙伴",
-            "手机端使用说明",
-            "电脑端使用说明",
-            "每次登录输入密码",
-            "客服QQ",
-            "版本更新",
-            "意见反馈"
+    int content[] = {
+            R.string.myfavorite,
+            R.string.yixiazai,
+            R.string.tuisongshezhi,
+            R.string.unbind,
+            R.string.changepassword,
+            R.string.qingchuhuancun1,
+            R.string.fenxianggei,
+            R.string.shoujishiyong,
+            R.string.diannaoshiyong,
+            R.string.meicidenglu,
+            R.string.kefuqq,
+            R.string.banbengengxin,
+            R.string.opinionfeedback,
     };
 
     int resId[] = {
@@ -182,8 +181,8 @@ public class MyActivity extends BaseActivity {
                         startActivityForResult(intent_unbind,1);
                         break;
                     case 4:
-//                        Intent intent3=new Intent(MyActivity.this,ChangePasswordActivity.class);
-//                        startActivity(intent3);
+                        Intent intent3=new Intent(MyActivity.this,ChangePasswordActivity.class);
+                        startActivity(intent3);
                         break;
                     case 5:
                         showMyDialog(0,R.string.qingchuhuancun,R.string.queding);
@@ -218,8 +217,8 @@ public class MyActivity extends BaseActivity {
                         }
                         break;
                     case 12://意见反馈
-//                        Intent intent12=new Intent(MyActivity.this,OpinionFeedbackActivity.class);
-//                        startActivity(intent12);
+                        Intent intent12=new Intent(MyActivity.this,OpinionFeedbackActivity.class);
+                        startActivity(intent12);
                         break;
                 }
             }

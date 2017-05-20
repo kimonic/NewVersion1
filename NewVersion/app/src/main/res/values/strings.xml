@@ -402,6 +402,25 @@
     <string name="xiezhufenlei">协助分类</string>
     <string name="xuanzediqu">请选择地区</string>
     <string name="diqu">地\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020区</string>
+    <string name="tuisongshezhi">推送设置</string>
+    <string name="qingchuhuancun1">清除缓存</string>
+    <string name="fenxianggei">分享给小伙伴</string>
+    <string name="meicidenglu">每次登录输入密码</string>
+    <string name="kefuqq">客服QQ</string>
+    <string name="banbengengxin">版本更新</string>
+    <string name="huoquyanzhengma">获取验证码</string>
+    <string name="wangluolianjieshibai">网络连接失败,请检查您的网络连接!</string>
+    <string name="huoquchenggong">获取验证码成功!</string>
+    <string name="huoqushibai">获取验证码失败,请稍后重试!</string>
+    <string name="yitijiao">获取验证码请求已提交!</string>
+    <string name="btxbnwk">必填项不能为空!</string>
+    <string name="yzmsrcw">验证码输入错误!</string>
+    <string name="xmmlcsrbyz">新密码两次输入不一致,请检查后重新输入!</string>
+    <string name="xmmbngymmyz">新密码不能跟原密码一致!</string>
+    <string name="mmcdbyxylw">密码的长度不应小于6位!</string>
+    <string name="mmcdbydyslw">密码的长度不应大于16位!</string>
+    <string name="mmbxwzmyszdzh">密码必须为字母与数字的组合,不能为纯数字!</string>
+    <string name="mmxgqqytj">密码修改请求已提交!</string>
 
 
 </resources>

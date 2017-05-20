@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+    <dingw.com.newversion.customview.TopBar
+        android:id="@+id/topbar_opinionfeedbackact"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        custom:centerText="@string/opinionfeedback"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:textSize="16sp"
+            android:gravity="center"
+            android:maxLines="1"
+            android:text="@string/feedbacktitle"
+            android:layout_weight="1"
+            />
+        <EditText
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="3"
+            android:hint="@string/feedbackissue"
+            android:maxLines="1"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:background="@drawable/xshape_etbac_normal"
+            android:id="@+id/edittext_opinionfeedbackact_title"
+            android:textSize="16sp"
+            android:layout_marginEnd="5dp"
+            android:layout_marginRight="5dp"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:maxLines="1"
+            android:text="@string/opinionfeedback"
+            android:textSize="16sp" />
+
+        <EditText
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="3"
+            android:gravity="top"
+            android:hint="@string/feedbackcontent"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp"
+            android:id="@+id/edittext_opinionfeedbackact_content"
+            android:background="@drawable/xshape_etbac_normal"
+            android:textSize="16sp"
+            android:layout_marginEnd="5dp"
+            android:layout_marginRight="5dp"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp">
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:textSize="16sp"
+            android:gravity="center"
+            android:maxLines="1"
+            android:text="@string/qqmail"
+            android:layout_weight="1"
+            />
+        <EditText
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="3"
+            android:maxLines="1"
+            android:layout_marginEnd="5dp"
+            android:layout_marginRight="5dp"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp"
+            android:hint="@string/contactway"
+            android:background="@drawable/xshape_etbac_normal"
+            android:id="@+id/edittext_opinionfeedbackact_contentway"
+            android:textSize="16sp"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"/>
+
+    </LinearLayout>
+    <dingw.com.newversion.customview.SuperTextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:layout_marginRight="20dp"
+        android:layout_marginLeft="20dp"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:gravity="center"
+        android:textColor="@color/mytextcolorwhite"
+        android:id="@+id/textview_opinionfeedbackact_submit"
+        android:text="@string/submitfeedback"
+        custom:corner="5dp"
+        custom:solid="@color/voilet1"
+        />
+
+</LinearLayout>

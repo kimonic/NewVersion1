@@ -9,7 +9,7 @@ import dingw.com.newversion.base.BaseBean;
 
 public class MyActBean extends BaseBean {
     /**字符串内容*/
-    private String content;
+    private int content;
     /**资源id*/
     private int resId;
     /**字符串内容*/
@@ -17,18 +17,18 @@ public class MyActBean extends BaseBean {
     /**资源id*/
     private int resIdt;
 
-    public MyActBean(String content, int resId, String mark, int resIdt) {
+    public MyActBean(int content, int resId, String mark, int resIdt) {
         this.content = content;
         this.resId = resId;
         this.mark = mark;
         this.resIdt = resIdt;
     }
 
-    public String getContent() {
+    public int getContent() {
         return content;
     }
 
-    public void setContent(String content) {
+    public void setContent(int content) {
         this.content = content;
     }
 

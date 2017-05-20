@@ -2,78 +2,69 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="dingw.com.newversion">
 
-    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
-    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
-    <!--1111111111111111111111111111111111友盟权限111111111111111111111111111111111111111111111111111111111111-->
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <!-- 1111111111111111111111111111111111友盟权限111111111111111111111111111111111111111111111111111111111111 -->
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
     <uses-permission android:name="android.permission.READ_PHONE_STATE" />
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
     <uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS" />
-    <!--1111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111-->
 
+    <!-- 1111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111 -->
     <application
+        android:name=".App"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme"
-        android:name=".App"
-        >
+        android:theme="@style/AppTheme">
 
-        <!--1111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111-->
-        <!--微信-->
+        <!-- 1111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111 -->
+        <!-- 微信 -->
         <activity
             android:name=".wxapi.WXEntryActivity"
             android:configChanges="keyboardHidden|orientation|screenSize"
             android:exported="true"
             android:screenOrientation="portrait"
             android:theme="@android:style/Theme.Translucent.NoTitleBar" />
-
         qq精简版
         <activity
             android:name="com.umeng.qq.tencent.AuthActivity"
             android:launchMode="singleTask"
-            android:noHistory="true" >
-
+            android:noHistory="true">
             <intent-filter>
                 <action android:name="android.intent.action.VIEW" />
+
                 <category android:name="android.intent.category.DEFAULT" />
                 <category android:name="android.intent.category.BROWSABLE" />
+
                 <data android:scheme="tencent100424468" />
             </intent-filter>
         </activity>
-
         <activity
             android:name="com.umeng.qq.tencent.AssistActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
             android:screenOrientation="portrait"
-            android:theme="@android:style/Theme.Translucent.NoTitleBar"
-            android:configChanges="orientation|keyboardHidden|screenSize"/>
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
 
-        <!--&lt;!&ndash;分享编辑页&ndash;&gt;-->
-        <!--<activity-->
-            <!--android:name="com.umeng.socialize.editorpage.ShareActivity"-->
-            <!--android:theme="@style/Theme.UMDefault"-->
-            <!--android:excludeFromRecents="true"-->
-            <!--/>-->
+        <!-- &lt;!&ndash;分享编辑页&ndash;&gt; -->
+        <!-- <activity -->
+        <!-- android:name="com.umeng.socialize.editorpage.ShareActivity" -->
+        <!-- android:theme="@style/Theme.UMDefault" -->
+        <!-- android:excludeFromRecents="true" -->
+        <!-- /> -->
 
-        <!--添加友盟apkey-->
+
+        <!-- 添加友盟apkey -->
         <meta-data
             android:name="UMENG_APPKEY"
-            android:value="58ed984f1061d266c0002558" >
-        </meta-data>
+            android:value="58ed984f1061d266c0002558" />
 
-
-
-
-
-
-        <!--1111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111-->
-
-
+        <!-- 1111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111 -->
 
         <activity android:name=".MainActivity">
             <intent-filter>
@@ -82,23 +73,24 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".activity.LoginActivity"/>
-        <activity android:name=".activity.BindOrUnbindActivity"/>
-        <activity android:name=".activity.HomeActivity"/>
-        <activity android:name=".activity.CommonActivity"/>
-        <activity android:name=".activity.wait.ChatActivity"/>
-        <activity android:name=".activity.wait.MyActivity"/>
-        <activity android:name=".activity.wait.MyItemActivity"/>
-        <activity android:name=".activity.TwoTopButtonActivity"/>
-        <activity android:name=".activity.wait.NewLawExpressActivity"/>
-        <activity android:name=".activity.wait.NetizenConsultDeActivity"/>
-
-        <activity android:name=".activity.work.WorkTwoActivity"/>
-        <activity android:name=".activity.work.FileRepositoryActivity"/>
-        <activity android:name=".activity.work.NoticeDeActivity"/>
-        <activity android:name=".activity.platform.LawCalculatorActivity"/>
-
-        <activity android:name=".activity.community.ZhuanZaiMediaaActivity"/>
+        <activity android:name=".activity.LoginActivity" />
+        <activity android:name=".activity.BindOrUnbindActivity" />
+        <activity android:name=".activity.HomeActivity" />
+        <activity android:name=".activity.CommonActivity" />
+        <activity android:name=".activity.wait.ChatActivity" />
+        <activity android:name=".activity.wait.MyActivity" />
+        <activity android:name=".activity.wait.MyItemActivity" />
+        <activity android:name=".activity.TwoTopButtonActivity" />
+        <activity android:name=".activity.wait.NewLawExpressActivity" />
+        <activity android:name=".activity.wait.NetizenConsultDeActivity" />
+        <activity android:name=".activity.work.WorkTwoActivity" />
+        <activity android:name=".activity.work.FileRepositoryActivity" />
+        <activity android:name=".activity.work.NoticeDeActivity" />
+        <activity android:name=".activity.platform.LawCalculatorActivity" />
+        <activity android:name=".activity.community.ZhuanZaiMediaaActivity" />
+        <activity android:name=".Main22Activity"/>
+        <activity android:name=".activity.wait.OpinionFeedbackActivity"/>
+        <activity android:name=".activity.wait.ChangePasswordActivity"/>
 
     </application>
 
