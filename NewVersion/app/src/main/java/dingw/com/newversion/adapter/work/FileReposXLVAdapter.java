@@ -13,6 +13,7 @@ import dingw.com.newversion.R;
 import dingw.com.newversion.base.BaseBean;
 import dingw.com.newversion.base.CustomAdapter;
 import dingw.com.newversion.bean.work.FileRepositoryBean;
+import dingw.com.newversion.bean.work.FileRepositoryGBean;
 
 /**
  * Created by 12348 on 2017/5/8 0008.
@@ -42,32 +43,32 @@ public class FileReposXLVAdapter extends CustomAdapter {
             view=convertView;
             viewHolder= (ViewHolder) view.getTag();
         }
-        if (((FileRepositoryBean)list.get(position)).getFolder_name()!=null){
+        if (((FileRepositoryGBean.ListBean)list.get(position)).getName()!=null&&!((FileRepositoryGBean.ListBean)list.get(position)).getName().contains(".")){
             viewHolder.imageView.setImageResource(R.drawable.fileicon_folder);
-            viewHolder.textView_title.setText(((FileRepositoryBean)list.get(position)).getFolder_name());
-            viewHolder.textView_time.setText(((FileRepositoryBean)list.get(position)).getFolder_inster_time());
+            viewHolder.textView_title.setText(((FileRepositoryGBean.ListBean)list.get(position)).getName());
+            viewHolder.textView_time.setText(((FileRepositoryGBean.ListBean)list.get(position)).getCreate_time());
             viewHolder.textView_size.setText("");
-        }else if (((FileRepositoryBean)list.get(position)).getFile_name()!=null){
+        }else if (((FileRepositoryGBean.ListBean)list.get(position)).getName()!=null){
 
-            if (setImageType(((FileRepositoryBean)list.get(position)).getFile_name(),".JPG",".jpg")){
+            if (setImageType(((FileRepositoryGBean.ListBean)list.get(position)).getName(),".JPG",".jpg")){
                 viewHolder.imageView.setImageResource(R.drawable.fileicon_jpg);
-            }else if (setImageType(((FileRepositoryBean)list.get(position)).getFile_name(),".XLSX",".xlsx")){
+            }else if (setImageType(((FileRepositoryGBean.ListBean)list.get(position)).getName(),".XLSX",".xlsx")){
                 viewHolder.imageView.setImageResource(R.drawable.fileicon_xlsx);
-            }else  if (setImageType(((FileRepositoryBean)list.get(position)).getFile_name(),".ZIP",".zip")){
+            }else  if (setImageType(((FileRepositoryGBean.ListBean)list.get(position)).getName(),".ZIP",".zip")){
                 viewHolder.imageView.setImageResource(R.drawable.fileicon_zip);
-            }else  if (setImageType(((FileRepositoryBean)list.get(position)).getFile_name(),".PNG",".png")){
+            }else  if (setImageType(((FileRepositoryGBean.ListBean)list.get(position)).getName(),".PNG",".png")){
                 viewHolder.imageView.setImageResource(R.drawable.fileicon_png);
-            }else  if (setImageType(((FileRepositoryBean)list.get(position)).getFile_name(),".PDF",".pdf")){
+            }else  if (setImageType(((FileRepositoryGBean.ListBean)list.get(position)).getName(),".PDF",".pdf")){
                 viewHolder.imageView.setImageResource(R.drawable.fileicon_pdf);
-            }else  if (setImageType(((FileRepositoryBean)list.get(position)).getFile_name(),".DOCX",".docx")){
+            }else  if (setImageType(((FileRepositoryGBean.ListBean)list.get(position)).getName(),".DOCX",".docx")){
                 viewHolder.imageView.setImageResource(R.drawable.fileicon_docx);
             }else{
                 viewHolder.imageView.setImageResource(R.drawable.fileicon_no);
             }
             //字符串中加空格可以解决长数字或者长字母全部不能显示的问题
-            viewHolder.textView_title.setText(((FileRepositoryBean)list.get(position)).getFile_name());
-            viewHolder.textView_time.setText(((FileRepositoryBean)list.get(position)).getFile_inster_time());
-            viewHolder.textView_size.setText(((FileRepositoryBean)list.get(position)).getFile_size());
+            viewHolder.textView_title.setText(((FileRepositoryGBean.ListBean)list.get(position)).getName());
+            viewHolder.textView_time.setText(((FileRepositoryGBean.ListBean)list.get(position)).getCreate_time());
+            viewHolder.textView_size.setText(((FileRepositoryGBean.ListBean)list.get(position)).getSize());
         }
 
 

@@ -421,6 +421,7 @@
     <string name="mmcdbydyslw">密码的长度不应大于16位!</string>
     <string name="mmbxwzmyszdzh">密码必须为字母与数字的组合,不能为纯数字!</string>
     <string name="mmxgqqytj">密码修改请求已提交!</string>
+    <string name="dangqianmeiyou">当前没有显示内容</string>
 
 
 </resources>

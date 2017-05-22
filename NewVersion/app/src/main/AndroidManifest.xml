@@ -91,6 +91,7 @@
         <activity android:name=".Main22Activity"/>
         <activity android:name=".activity.wait.OpinionFeedbackActivity"/>
         <activity android:name=".activity.wait.ChangePasswordActivity"/>
+        <activity android:name=".activity.work.SearchActivity"/>
 
     </application>
 
